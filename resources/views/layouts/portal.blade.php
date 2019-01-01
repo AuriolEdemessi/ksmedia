@@ -9,25 +9,25 @@
 <meta name="theme-color" content="#4237ef"/>
 <meta name="HandheldFriendly" content="true" />
 <title>Kerawa Space | Home</title>
-<meta name="author" content="Themezinho">
+<meta name="author" content="CRACLABS">
 <meta name="description" content="Kerawa Space">
 <meta name="keywords" content="creative, works, showcase, portfolio, highlight, projects, modern, agency, digital, studio, css, animation, transition, freelancers">
 
 <!-- SOCIAL MEDIA META -->
 <meta property="og:description" content="Kerawa Space">
-<meta property="og:image" content="preview.html">
+<meta property="og:image" content="http://www.kerawaspace.com">
 <meta property="og:site_name" content="annusa">
-<meta property="og:title" content="annusa">
+<meta property="og:title" content="Kerawa ">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://www.themezinho.net/annusa">
+<meta property="og:url" content="themezinho.net/annusa">
 
-<!-- TWITTER META -->
+<!-- TWITTER META 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@annusa">
 <meta name="twitter:creator" content="@annusa">
 <meta name="twitter:title" content="annusa">
 <meta name="twitter:description" content="Kerawa Space">
-<meta name="twitter:image" content="preview.html">
+<meta name="twitter:image" content="preview.html">-->
 
 <!-- FAVICON FILES -->
 <link href="ico/apple-touch-icon-180-precomposed.png" rel="apple-touch-icon" sizes="180x180">
@@ -85,39 +85,7 @@
   <!-- end sandwich-menu --> 
 </nav>
 <!-- end navbar -->
-<header class="slider">
-  <div class="video-bg">
-		<video src="video/hero.mp4" autoplay muted playsinline loop></video>
-    
-	  <div class="container">
-	  
-            <div class="link-holder"> <a href="{{ route('posts.index') }}">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="2 2 100 100" xml:space="preserve">
-                <circle fill="none" stroke="#fff" stroke-width="2" cx="52" cy="52" r="50"></circle>
-              </svg>
-              <span>DISCOVER</span> </a>
-		  </div>
-		  <!-- end link-holder -->
-	  </div>
-	  <!-- end container -->
-	</div>
-	<!-- end video-bg -->
-  
-  <!-- end bottom-bar -->
-  <aside class="left-side">
-    <div class="social-links">
-      <ul>
-        <li><a href="#" data-text="github">github</a></li>
-        <li><a href="#" data-text="behance">behance</a></li>
-        <li><a href="#" data-text="behance">behance</a></li>
-      </ul>
-    </div>
-    <!-- end social-links --> 
-  </aside>
-  <!-- end left-side -->
-  <aside class="right-side"> <a href="#" data-text="info@kerawaspace.com">info@kerawaspace.com</a> </aside>
-  <!-- end right-side --> 
-</header>
+@yield('content')
 <!-- end slider -->
 
 <!-- end content-section -->
