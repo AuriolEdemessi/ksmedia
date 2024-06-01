@@ -15,6 +15,10 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
+    return view('portal');
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
 

@@ -1,10 +1,7 @@
-<!-- resources/views/posts/edit.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Edit Post</title>
-</head>
-<body>
+@extends('layouts.admin')
+
+@section('content')
+
     <form action="{{ route('posts.update', $post) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
@@ -70,5 +67,5 @@
 
         <button type="submit">Update</button>
     </form>
-</body>
-</html>
+
+    @stop

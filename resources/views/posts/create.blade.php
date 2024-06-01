@@ -1,13 +1,7 @@
 <!-- resources/views/posts/create.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Create Post</title>
-</head>
-<body>
-    @if (session('success'))
-        <div>{{ session('success') }}</div>
-    @endif
+@extends('layouts.admin')
+
+@section('content')
 
     <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -72,5 +66,5 @@
 
         <button type="submit">Upload</button>
     </form>
-</body>
-</html>
+
+   @stop

@@ -1,10 +1,8 @@
 <!-- resources/views/posts/index.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>All Posts</title>
-</head>
-<body>
+@extends('layouts.admin')
+
+@section('content')
+
     <h1>All Posts</h1>
     <a href="{{ route('posts.create') }}">Create New Post</a>
     @foreach ($posts as $post)
@@ -13,5 +11,6 @@
             <p>{{ $post->description }}</p>
         </div>
     @endforeach
-</body>
-</html>
+
+
+    @stop

@@ -1,10 +1,9 @@
 <!-- resources/views/posts/show.blade.php -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Show Post</title>
-</head>
-<body>
+@extends('layouts.admin')
+
+@section('content')
+
+
     <h1>{{ $post->title }}</h1>
     <p>Type: {{ $post->type }}</p>
     <p>Author: {{ $post->author }}</p>
@@ -33,5 +32,5 @@
         @method('DELETE')
         <button type="submit">Delete</button>
     </form>
-</body>
-</html>
+
+@stop
