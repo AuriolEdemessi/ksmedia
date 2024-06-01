@@ -1,36 +1,75 @@
 <!-- resources/views/posts/show.blade.php -->
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
 
 
-    <h1>{{ $post->title }}</h1>
-    <p>Type: {{ $post->type }}</p>
-    <p>Author: {{ $post->author }}</p>
-    <p>Description: {{ $post->description }}</p>
-    <p>Category: {{ $post->category }}</p>
+<div class="Content">
+    <main class="SingleArtists">
+        
+        
+        <div class="gallery columns-3">
+            <div class="gallery-item">
+                <div class="SingleArtists-main">
+                    <h2 class="SingleArtists-title">{{ $post->title }}</h2>
+                    <div class="SingleArtists-description">
+                        <div class="RichText">
+                            <p> {{ $post->description }}</p>
+                            <p>Type: {{ $post->type }} by <b>{{ $post->author }}</b><br><br>
+                                Category: <b>{{ $post->category }}</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="SingleArtists-links">
+                        <div class="Links"></div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Afficher l'image de couverture -->
-    @if ($post->getFirstMedia('cover'))
-        <div>
-            <img src="{{ $post->getFirstMediaUrl('cover') }}" alt="{{ $post->title }}" style="max-width: 100%;">
-        </div>
-    @endif
+            <!-- Images de la galerie avec Fancybox -->
+            <div class="row">
 
-    <!-- Afficher les images supplémentaires -->
-    @if ($post->getMedia('photos')->count() > 0)
-        <div>
-            @foreach ($post->getMedia('photos') as $photo)
-                <img src="{{ $photo->getUrl() }}" alt="{{ $post->title }}" style="max-width: 100%;">
-            @endforeach
+            @if ($post->getFirstMedia('cover'))
+
+
+            <div class="gallery-item">
+                
+
+               
+            <img src="{{ $post->getFirstMediaUrl('cover') }}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="{{ $post->title }}">
+                  <div class="overlay">
+                    <div class="image-description"></div>
+                  </div>
+                
+              </div>
+
+              @endif
+
+            
+              @if ($post->getMedia('photos')->count() > 0)
+              @foreach ($post->getMedia('photos') as $photo)
+<div class="gallery-item">
+    <a href="">
+      <img src="{{ $photo->getUrl() }}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="{{ $post->title }}">
+      <div class="overlay">
+        <div class="image-description"></div>
+      </div>
+    </a>
+  </div>
+  @endforeach
+  @endif
+
+  
+
+                
+                
+                <!-- Continuez d'ajouter d'autres images avec le même format -->
+            </div>
+
         </div>
-    @endif
-    
-    <a href="{{ route('posts.edit', $post) }}">Edit</a>
-    <form action="{{ route('posts.destroy', $post) }}" method="POST">
-        @csrf
-        @method('DELETE')
-        <button type="submit">Delete</button>
-    </form>
+    </main>
+</div>
+
+
 
 @stop

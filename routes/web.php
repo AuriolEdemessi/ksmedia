@@ -22,6 +22,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+
+Route::get('artworks', [PostController::class, 'index'])->name('artworks');
+
 // Route pour le tableau de bord de l'administrateur
 Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
