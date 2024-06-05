@@ -79,7 +79,7 @@ http://miradontsoa.com
   <div class="page-loader" id="page-loader">
     <div>
       <!--<div class="icon ion-spin"></div>-->
-      <p>AESTHETIC <br> BECAUSE WE ARE</p>
+      <p>AESTHETIC <br> BECAUSE <br> WE ARE</p>
     </div>
   </div>
 
@@ -189,11 +189,13 @@ http://miradontsoa.com
     <div class="cover-bg bg-img" data-image-src="img/bg-default.jpg"></div>
 
     <!--BEGIN OF Static video bg - uncomment below to use Video as Background-->
-    <div id="container" class="video-container d-none d-sm-block">
-      <video autoplay="autoplay" loop="loop" muted="muted" width="640" height="360">
+    <div id="container" class="video-container d-none d-sm-block" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1;">
+      <video autoplay loop muted style="position: absolute; top: 50%; left: 50%; width: auto; height: auto; min-width: 100%; min-height: 100%; transform: translate(-50%, -50%);">
         <source src="videos/hero.mp4" type="video/mp4">
       </video>
     </div>
+
+
     <!--END OF Static video bg-->
 
     <!--BEGIN OF Youtube video bg  - uncomment/comment below to use/or not Youtube Video as Background-->

@@ -25,6 +25,9 @@ Route::get('/welcome', function () {
 
 Route::get('artworks', [PostController::class, 'index'])->name('artworks');
 
+
+Route::get('posts/preview#{post}', [PostController::class, 'preview'])->name('posts.preview');
+
 // Route pour le tableau de bord de l'administrateur
 Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
