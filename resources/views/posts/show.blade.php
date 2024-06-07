@@ -23,20 +23,20 @@
 
             <!-- Images de la galerie avec Fancybox -->
             <div class="row">
-                @if ($post->getFirstMedia('cover'))
+                @if($post->cover_url)
                 <div class="gallery-item">
-                    <img src="{{ $post->getFirstMediaUrl('cover') }}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="{{ $post->title }}">
+                    <img src="{{ $post->cover_url }}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="{{ $post->title }}">
                     <div class="overlay">
                         <div class="image-description"></div>
                     </div>
                 </div>
                 @endif
 
-                @if ($post->getMedia('photos')->count() > 0)
-                @foreach ($post->getMedia('photos') as $photo)
+                @if($post->photos_urls)
+                @foreach($post->photos_urls as $photo_url)
                 <div class="gallery-item">
                     <a href="#">
-                        <img src="{{ $photo->getUrl() }}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="{{ $post->title }}">
+                        <img src="{{ $photo_url }}" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="{{ $post->title }}">
                         <div class="overlay">
                             <div class="image-description"></div>
                         </div>

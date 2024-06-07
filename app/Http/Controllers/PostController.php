@@ -14,29 +14,27 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-    $validatedData = $request->validate([
-        'title' => 'required|string|max:255',
-        'type' => 'required|string',
-        'author' => 'required|string|max:255',
-        'description' => 'required|string',
-        'category' => 'required|string|max:255',
-        'cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-    ]);
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'type' => 'required|string',
+            'author' => 'required|string|max:255',
+            'description' => 'required|string',
+            'category' => 'required|string|max:255',
+            'cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
 
-    $post = Post::create($validatedData);
+        $post = Post::create($validatedData);
 
-    if ($request->hasFile('cover')) {
-        $post->addMedia($request->file('cover'))->toMediaCollection('cover');
-    }
+        if ($request->hasFile('cover')) {
+            $post->addMedia($request->file('cover'))->toMediaCollection('cover');
+        }
 
-    if ($request->hasFile('photos')) {
-        /*foreach ($request->file('photos') as $photo) {
-            $post->addMedia($photo)->toMediaCollection('photos');
-        }*/
-        $post->clearMediaCollection('photos'); 
-        $post->addMedia($request->file('photos'))->toMediaCollection('photos');
-    }
+        if ($request->hasFile('photos')) {
+            foreach ($request->file('photos') as $photo) {
+                $post->addMedia($photo)->toMediaCollection('photos');
+            }
+        }
 
         return redirect()->route('posts.show', $post);
     }

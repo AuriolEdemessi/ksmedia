@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
+use UniSharp\LaravelFilemanager\Lfm;
+use App\Http\Controllers\FileManagerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,6 +36,13 @@ Route::get('admin/dashboard', [AdminController::class, 'dashboard'])->name('admi
 // Route pour les paramètres de l'administrateur
 Route::get('admin/settings', [AdminController::class, 'settings'])->name('admin.settings');
 
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    Lfm::routes();
+});
+
+
+Route::get('/filemanager', [FileManagerController::class, 'index'])->name('filemanager.index');
 
 Route::get('posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('posts/create', [PostController::class, 'create'])->name('posts.create');

@@ -14,17 +14,6 @@ class Post extends Model implements HasMedia
 
     protected $fillable = ['title', 'type', 'author', 'description', 'category'];
 
-    protected $appends = ['photos'];
- 
-    public function getPhotosAttribute()
-    {
-    $photos=$this->getFirstMediaUrl('photos') ? $this->getFirstMediaUrl('photos') : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRShs-5rOAO2ObBv7UzfsR4Qr_Nc9lfWn4ggedMi7H6GA&s';
-    if($photos){
-    $photos=str_replace('localhost', 'localhost:8000', $photos);
-    }
-    return $photos;
-}
-
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')
@@ -32,6 +21,17 @@ class Post extends Model implements HasMedia
             ->height(232)
             ->sharpen(10);
     }
+    
+    public function getCoverUrlAttribute()
+    {
+        return $this->getFirstMediaUrl('cover') ?: 'default-image-url';
+    }
 
-   
+    public function getPhotosUrlsAttribute()
+    {
+        return $this->getMedia('photos')->map(function (Media $media) {
+            return $media->getUrl();
+        })->all();
+    }
 }
+
