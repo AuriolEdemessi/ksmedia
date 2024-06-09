@@ -11,3 +11,4 @@ class FileManagerController extends Controller
         return view('filemanager.index');
     }
 }
+
