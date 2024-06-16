@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -27,8 +28,12 @@ class RegisterController extends Controller
      * Where to redirect users after registration.
      *
      * @var string
+     * 
      */
-    protected $redirectTo = '/home';
+    protected function redirectTo()
+    {
+        return '/projects';
+    }
 
     /**
      * Create a new controller instance.

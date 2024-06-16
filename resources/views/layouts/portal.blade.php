@@ -1,1104 +1,235 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<!--
+Website By Miradontsoa / MiVFX
+http://twitter.com/miradontsoa
+http://miradontsoa.com
+-->
 
-  
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<html class="no-js" lang="en">
 
+
+<!-- Mirrored from demo.highhay.com/agenci/index-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Aug 2022 13:32:59 GMT -->
 <head>
-    <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <!-- Page Title -->
-    <title>KERAWA SPACE | HOME</title>
+  <!-- Page Title Here -->
+  <title>Kerawa Space | Home</title>
 
-    <!-- Meta Tags -->
-    <meta name="description" content="Ackley - bold and clean coming soon and landing page template to kick-start your project">
-    <meta name="keywords" content="ackley, coming soon, under construction, template, coming soon page, html5, css3, fashion, elegant">
-    <meta name="author" content="CODEO | CRACLAB">
+  <!-- Meta -->
+  <!-- Page Description Here -->
+  <meta name="description" content="A beautiful and creative portfolio template. It is mobile friend (responsive) and comes with smooth animations">
 
-    <!-- Viewport Meta-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Disable screen scaling-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-    <!-- Template Favicon & Icons Start -->
-    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="img/favicon/manifest.webmanifest">
-    <!-- Template Favicon & Icons End -->
+  <!-- Twitter Meta -->
+  <meta name="twitter:site" content="@miradontsoa">
+  <meta name="twitter:creator" content="@miradontsoa">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Page Title">
+  <meta name="twitter:description" content="Description of the page">
+  <meta name="twitter:image" content="../img/bg-default.html">
 
-    <!-- Facebook Metadata Start -->
-    <meta property="og:image:height" content="1200">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:title" content="Ackley - Coming Soon and Landing Page Template">
-    <meta property="og:description" content="Ackley - bold and clean coming soon and landing page template to kick-start your project">
-    <meta property="og:url" content="index.html">
-    <meta property="og:image" content="favicon/og-image-2.html">
-    <!-- Facebook Metadata End -->
+  <!-- Facebook Meta -->
+  <meta property="og:url" content="your website url here">
+  <meta property="og:title" content="Page Title">
+  <meta property="og:description" content="Description of the page">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../img/bg-default.html">
+  <meta property="og:image:secure_url" content="../img/bg-default.html">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <!-- Template Styles Start -->
-    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!-- Template Styles End -->
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <!-- Web fonts and Web Icons -->
+  <link rel="stylesheet" href="portal/fonts/notosans/stylesheet.css">
+  <link rel="stylesheet" href="portal/fonts/glacial/stylesheet.css">
+  <link rel="stylesheet" href="portal/fonts/montserrat/stylesheet.css">
+  <link rel="stylesheet" href="portal/fonts/playfair/stylesheet.css">
+  <link rel="stylesheet" href="portal/fonts/ionicons.min.css">
+  <link rel="stylesheet" href="portal/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="indestructibletype.com/fonts/Jost.css" type="text/css"
+  charset="utf-8" />
 
-    <!-- Custom Browser Color Start -->
-    <meta name="theme-color" content="#10102b">
-    <meta name="msapplication-navbutton-color" content="#10102b">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#10102b">
-    <!-- Custom Browser Color End -->
-  </head>
+  <!-- Vendor CSS style -->
+  <link rel="stylesheet" href="portal/css/pageloader.css">
 
-  <body>
+  <!-- Uncomment below to load individualy vendor CSS -->
+  <link rel="stylesheet" href="portal/css/bootstrap.min.css">
+  <link rel="stylesheet" href="portal/js/vendor/swiper.min.css">
+  <link rel="stylesheet" href="portal/js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="portal/js/vegas/vegas.min.css">
 
-    <!-- Loader Start -->
-    <div class="loader">
-      <div class="loader__container">
-        <div class="loader__circle">
-          <img src="img/loader.svg" alt="Ackley Template Loader Logo">
-        </div>
-      </div>
+  <!-- Main CSS files -->
+  <link rel="stylesheet" href="portal/css/main.css">
+
+  <!-- add alt layout here -->
+  <link rel="stylesheet" href="portal/css/style-bg.css">
+
+  <script src="portal/js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+
+<body id="menu" class="body-page">
+  <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- Page Loader : just comment these lines to remove it -->
+  <div class="page-loader" id="page-loader">
+    <div>
+      <!--<div class="icon ion-spin"></div>-->
+      <p>AESTHETIC <br> BECAUSE WE ARE</p>
     </div>
-    <!-- Loader End -->
+  </div>
 
-    <!-- Header Start -->
-    <header id="header" class="header header-transparent d-flex align-items-center justify-content-between">
+  <!-- BEGIN OF site header Menu -->
+  <header class="page-header navbar page-header-drawer menu-right logo-left topmenu-right ">
 
-      <!-- Logo Start -->
-      <div class="header__logo">
-        <!-- Your Logo Here -->
-        <img src="img/logo.png" alt="KERAWA SPACE" style="width: 50%; height: auto;">
-      </div>
+    <!-- Begin of menu icon toggler -->
+    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+      <!-- Available class : menu-icon-dot / menu-icon-line-->
+      <span class="menu-icon menu-icon-line">
+        <span class="text show-menu-visible">Close</span>
+        <span class="text hide-menu-visible">Home</span>
+        <span class="bars">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+        </span>
+      </span>
+    </button>
+    <!-- End of menu icon toggler -->
 
-      <!-- Logo End -->
+    <!-- Begin of logo/brand -->
+    <a class="navbar-brand" href="index-2.html#">
+      <!-- Arrows scroll down/up -->
+      <span class="logo">
+        <!--<img class="light-logo" src="iconw.png" alt="Logo">--><img class="light-logo" src="logowhite.png" alt="Logo">
+      </span>
+      <span class="text">
+        <span class="line"></span>
+		
+      </span>
+    </a>
+    <!-- End of logo/brand -->
 
-      <!-- Header Controls Start -->
-      <div class="header__controls d-flex justify-content-start">
+    <!-- begin of menu wrapper -->
+    <div class="all-menu-wrapper" id="navbarMenu">
 
-        <!-- Say Hello Button Start -->
-        <div class="controls__block d-flex align-items-center">
-          <a href="#0" id="sayhello-trigger" class="btn sayhello-trigger link-l">
-            <i class="fa-solid fa-pencil"></i>
-            <span>JOIN US</span>
-          </a>
-        </div>
-        <!-- Say Hello Button End -->
-
-        <!-- Socials Start -->
-        <div class="controls__block d-flex align-items-center">
-          <!-- socials trigger -->
-          <a href="#" id="socials-trigger" class="socials-trigger link-l">
-            <i class="fa-solid fa-share-nodes"></i>
-          </a>
-          <!-- socials -->
-          <div id="header-socials" class="header__socials">
-            <!-- socials close -->
-            <a href="#" id="socials-close" class="socials__close link-l">
-              <span></span>
-            </a>
-            <!-- socials links -->
-            <ul class="socials__links">
-              <li>
-                <a class="link-s" href="https://discord.com/" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a class="link-s" href="https://twitter.com/" target="_blank">
-                  <i class="fa-brands fa-twitter"></i>
-                  <span>Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a class="link-s" href="https://dribbble.com/" target="_blank">
-                  <i class="fa-brands fa-dribbble"></i>
-                  <span>Dribbble</span>
-                </a>
-              </li>
-              <li>
-                <a class="link-s" href="https://www.tiktok.com/" target="_blank">
-                  <i class="fa-brands fa-tiktok"></i>
-                  <span>Tik-Tok</span>
-                </a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-        <!-- Socials End -->
-
-        <!-- Menu Trigger Start -->
-        <div class="controls__block">
-          <a href="#0" id="menu-trigger" class="menu-trigger link-l">
-            <span class="menu-objects"></span>
-            <span class="menu-close"></span>
-          </a>
-        </div>
-        <!-- Menu Trigger End -->
-
-      </div>
-      <!-- Header Controls End -->
-
-    </header>
-    <!-- Header End -->
-
-    <!-- Menu Start -->
-    <nav id="menu" class="menu">
-      <div class="menu__content">
-        <!-- SVG gradient background -->
-        <div class="svg-layer svg-layer-menu"></div>
-        <div class="container-fluid p-0 fullheight-mobile">
-          <div class="row g-0 fullheight-mobile">
-
-            <!--Menu Data Block Start -->
-            <div class="col-12 menu__data">
-
-              <!-- Menu Links Start -->
-              <div class="menudata__links">
-                <div class="container-fluid p-0">
-                  <div class="row g-0">
-                    <div class="col-12">
-
-                      <!-- Navigation Start -->
-                      <ul class="navigation">
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="home-trigger">Home</a>
-                          <div id="home-trigger-marquee" class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="about-trigger">About Us</a>
-                          <div class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>About Us</span>
-                              <span>About Us</span>
-                              <span>About Us</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>About Us</span>
-                              <span>About Us</span>
-                              <span>About Us</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>About Us</span>
-                              <span>About Us</span>
-                              <span>About Us</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="works-trigger">Portfolio</a>
-                          <div class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="contact-trigger">Contact</a>
-                          <div class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Contact</span>
-                              <span>Contact</span>
-                              <span>Contact</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Contact</span>
-                              <span>Contact</span>
-                              <span>Contact</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Contact</span>
-                              <span>Contact</span>
-                              <span>Contact</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- Navigation End -->
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Menu Links End -->
-
-              <!-- Menu Footer Start -->
-              <div class="menudata__footer d-md-flex align-items-md-center justify-content-md-between">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 d-flex flex-column flex-md-row">
-                    <div class="col-12 col-md-6 text-start">
-                      <div class="content-block">
-                        <p class="additional-text"><a class="link-s" href="mailto:example@example.com?subject=Message%20from%20your%20site">contact@kerawaspace.com</a></p>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 text-start text-md-end">
-                      <div class="content-block">
-                        <p class="copyright additional-text"><a class="link-s" href="https://1.envato.market/EKA9WD" target="_blank">Kerawa Space</a>. 2024</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Menu Footer End -->
-
-            </div>
-            <!--Menu Data Block End -->
-
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Menu End -->
-
-    <!-- Main Section Start -->
-    <section id="main" class="main main-fullscreen active">
-
-      <!-- Main Section Content Start -->
-      <div class="main__content content-fullheight fullheight-mobile">
-
-        <!-- Fullscreen Background Start-->
-        <div class="fullscreen-bg">
-          <!-- local video background -->
-          <div class="video-background">
-            <video id="main-video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" poster="img/backgrounds/1920x1080-video-1.webp">
-              <source type="video/mp4" src="video/hero.mp4">
-             
-            </video>
-          </div>
-          <!-- dark cover layer -->
-          <div class="color-layer layer-dark-06"></div>
-        </div>
-        <!-- Fullscreen Background End-->
-
-        <div class="container-fluid px-0 fullheight-mobile">
-          <div class="row gx-0 fullheight-mobile">
-
-            <!-- Main Section Intro Start -->
-            <div class="col-12 main__intro intro-fullheight">
-
-              <!-- Main Intro Content Start -->
-              <div class="intro__content fullheight-mobile">
-                <div class="container-fluid p-0 fullheight-mobile">
-                  <div class="row g-0 fullheight-mobile">
-                    <div class="col-12 fullheight-mobile">
-
-                      <!-- Headline Start -->
-                      <div id="headline" class="headline centered-mobile">
-                        <h1 class="headline__title large"><br><br><br><br>
-                          
-                        </h1>
-                        
-                        <div class="headline__btnholder d-flex flex-column flex-md-row">
-                          <a href="#" class="d-flex justify-content-center justify-content-md-start btn btn-s btn-icon-left btn-light link-s">
-                            <h3 class="headline__title large"><span class="btn-title">DISCOVER <b>US</b></span>
-                            <span class="btn-icon-anim"><i class="fa-solid fa-arrow-right"></i></span></h3>
-                          </a>
-                          
-                        </div>
-                      </div>
-                      <!-- Headline End -->
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Main Intro Content End -->
-
-            </div>
-            <!-- Main Section Intro End -->
-
-          </div>
-        </div>
-
-        <!-- Main Section Marquee Start -->
-        <a href="mailto:example@example.com?subject=Message%20from%20your%20site" class="marquee link-l-arrow">
-          <div class="marquee-content scroll">
-            <span>Contact</span>
-            <span>Let's talk</span>
-            <span>Get in touch</span>
-          </div>
-          <div class="marquee-content scroll">
-            <span>Contact</span>
-            <span>Let's talk</span>
-            <span>Get in touch</span>
-          </div>
-          <div class="marquee-content scroll">
-            <span>Contact</span>
-            <span>Let's talk</span>
-            <span>Get in touch</span>
-          </div>
-        </a>
-        <!-- Main Section Marquee End -->
-
-      </div>
-      <!-- Main Section Content End -->
-
-    </section>
-    <!-- Main Section End -->
-
-    <!-- Inner About Section Start -->
-    <section id="about" class="inner about">
-      <div class="container-fluid p-0 fullheight">
-        <div class="row g-0 fullheight">
-
-          <!-- Inner Section Content Start -->
-          <div class="col-12 inner__content">
-            <!-- inner section blocks -->
-            <div class="inner__blocks svg-background-about svg-background-about">
-
-              <!-- Inner Container - Section Title Start -->
-              <div class="inner__container">
-                <div class="content-block">
-                  <span class="section__subtitle">About Us</span>
-                  <h2>Creativity is above all. Just awesome template.</h2>
-                  <p class="section__text">I wonder if I've been changed in the night? Let me think.
-                    Was I the same when I got up this morning? I almost think I can remember feeling a little different.
-                    But if I'm not the same, the <a class="text-link link-s" href="#" target="_blank">next question</a> is 'Who in the world am I?' Ah, that's the great puzzle!
-                  </p>
-                </div>
-              </div>
-              <!-- Inner Container - Section Title End -->
-
-              <!-- Inner Container - Features Start -->
-              <div class="inner__container features no-padding">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 align-items-stretch">
-                    <!-- feature single item -->
-                    <div class="col-12 col-lg-4 three-sells-block">
-                      <div class="features__item">
-                        <div class="features__image">
-                          <img src="img/features/600x360-feature-1.webp" alt="Ackley Feature Image">
-                        </div>
-                        <div class="features__descr">
-                          <span class="features__subtitle">Lovely</span>
-                          <h4 class="features__title">Eye catching design</h4>
-                          <p class="features__text">Have i gone mad? Im afraid so, but let me tell you something, the best people usualy are.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- feature single item -->
-                    <div class="col-12 col-lg-4 three-sells-block">
-                      <div class="features__item">
-                        <div class="features__image">
-                          <img src="img/features/600x360-feature-2.webp" alt="Marvio Feature Background">
-                        </div>
-                        <div class="features__descr">
-                          <span class="features__subtitle">Bright</span>
-                          <h4 class="features__title">Trendy gradients</h4>
-                          <p class="features__text">Why, sometimes I've believed as many as six impossible things before breakfast.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- feature single item -->
-                    <div class="col-12 col-lg-4 three-sells-block">
-                      <div class="features__item">
-                        <div class="features__image">
-                          <img src="img/features/600x360-feature-3.webp" alt="Marvio Feature Background">
-                        </div>
-                        <div class="features__descr">
-                          <span class="features__subtitle">Unique</span>
-                          <h4 class="features__title">Sections transitons</h4>
-                          <p class="features__text">I'm afraid I can't explain myself, sir. Because I am not myself, you see?</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Features End -->
-
-              <!-- Inner Container - Video Start -->
-              <div class="inner__container no-padding">
-                <div class="fullwidth-container padding-block">
-                  <div class="showreel showreel-image-1">
-                    <div class="showreel__button">
-                      <!-- video trigger -->
-                      <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger link-l-opposite">
-                        <img src="img/svg/110x110-showreel-filled.svg" alt="Ackley - Coming Soon and Landing Page Template">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Video End -->
-
-              <!-- Inner Container - Skillbars Start -->
-              <div class="inner__container no-padding">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 d-flex flex-column-reverse flex-lg-row align-items-stretch">
-                    <div class="col-12 col-lg-6 two-sells-block-reverse">
-                      <div class="media-container padding-block">
-                        <!-- inner image -->
-                        <div class="inner__image inner-image-1"></div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6 two-sells-block-reverse">
-                      <div class="padding-block">
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="96">
-                            <span class="skillbar-title">UI/UX Design</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="90">
-                            <span class="skillbar-title">Logo Design</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="83">
-                            <span class="skillbar-title">Branding</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="87">
-                            <span class="skillbar-title">3D Modeling</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="98">
-                            <span class="skillbar-title">Illustrations</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Skillbars End -->
-
-              <!-- Inner Container - Quote Start -->
-              <div class="inner__container">
-                <div class="content-block">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0"> 
-                      <div class="col-12 col-xl-8 col-xxl-6">
-
-                        <!-- Blockquote Start -->
-                        <blockquote cite="" class="blockquote">
-                          <span class="blockquote__icon">
-                            <img src="img/svg/110x110-quote-outline.svg" alt="Ackley - Coming Soon and Landing Page Template">
-                          </span>
-                          <p>
-                            My dear, here we must run as fast as we can, just to stay in place.
-                            And if you wish to go anywhere you must run twice as fast as that.
-                          </p>
-                          <cite>
-                            <span>Lewis Carroll</span>
-                            <span>Alice in Wonderland</span>
-                          </cite>
-                        </blockquote>
-                        <!-- Blockquote End -->
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Quote End -->
-
-              <!-- Inner Section Marquee Start -->
-              <a href="mailto:example@example.com?subject=Message%20from%20your%20site" class="marquee opposite marquee-relative link-l-arrow">
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
+      <!-- Begin of hamburger mainmenu menu -->
+      <nav class="navbar-mainmenu">
+        <div class="mainmenu-bg"></div>
+        <div class="mainmenu-content">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html#home">Home
+                <span class="sr-only">(current)</span>
               </a>
-              <!-- Inner Section Marquee End -->
-
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="item.html">Item</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="article.html">Article</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="demo.html">Demo</a>
+            </li>
+          </ul>
+          <div class="navbar-desc">
+            <div class="row">
+              <div class="col col-12 col-lg-8">
+                <p>This is our moto and it is just a placeholder text.
+                </p>
+              </div>
             </div>
           </div>
-          <!-- Inner Section Content End -->
-
-          <!-- Inner Section Media Start -->
-          <div class="col-12 inner__media">
-
-            <!-- Inner Swiper Carousel Start -->
-              <!-- Slider main container -->
-              <div class="swiper-inner">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide inner-slide inner-slide-1"></div>
-                  <div class="swiper-slide inner-slide inner-slide-2"></div>
-                </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-nav-block-ackley dark">
-                  <div class="swiper-button-prev split-slider-btn-ackley split-slider-btn-ackley-prev anim-left link-s"><i class="fa-solid fa-chevron-left"></i></div>
-                  <div class="swiper-button-next split-slider-btn-ackley split-slider-btn-ackley-next anim-right link-s"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="navbar-footer">
+            <div class="row no-gutters">
+              <div class="col col-12 col-md-6">
+                <div class="icons icons-margin">
+                  <a class="btn-icon" href="#">
+                    <i class="icon fa fa-instagram"></i>
+                  </a>
+                  <a class="btn-icon" href="#">
+                    <i class="icon fa fa-twitter"></i>
+                  </a>
                 </div>
               </div>
-              <!-- Inner Swiper Carousel End -->
-
+              <div class="col col-12 col-md-6 footer-notes">
+                <p class="text-right">Copyright - agenci. 2000</p>
+              </div>
+            </div>
           </div>
-          <!-- Inner Section Media End -->
-
         </div>
-      </div>
-    </section>
-    <!-- Inner About Section End -->
+      </nav>
+      <!-- End of hamburger mainmenu menu -->
 
-    <!-- Inner Portfolio Section Start -->
-    <section id="works" class="inner works">
-      <div class="container-fluid p-0 fullheight">
-        <div class="row g-0 fullheight">
-
-          <!-- Inner Section Content Start -->
-          <div class="col-12 inner__content">
-            <div class="inner__blocks">
-
-              <!-- Inner Container - Section Title Start -->
-              <div class="inner__container">
-                <div class="content-block">
-                  <span class="section__subtitle">Portfolio</span>
-                  <h2>Creating unique staff. Meet our featured projects.</h2>
-                  <p class="section__text">Be what you would seem to be - or, if you'd like it put more simply - never imagine yourself not to be
-                    otherwise than what it might appear to others that what you were or
-                    <a class="text-link link-s" href="#" target="_blank">might have been</a>
-                    was not otherwise than what you had been
-                    would have appeared to them to be otherwise.</p>
-                </div>
-              </div>
-              <!-- Inner Container - Section Title End -->
-
-              <!-- Inner Container - Gallery Start -->
-              <div class="inner__container no-padding">
-                <div class="container-fluid p-0 works__gallery">
-                  <div class="row g-0 my-gallery align-items-stretch" itemscope itemtype="http://schema.org/ImageGallery">
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-md-6 col-xl-4 my-gallery__item d-flex align-items-center" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/works/900x1200-portfolio-1.webp" data-image="img/works/900x1200-portfolio-1.webp" class="my-gallery__link link-l-arrow" itemprop="contentUrl" data-size="900x1200">
-                        <img src="img/works/900x1200-portfolio-1.webp" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4>Cute character
-                          <small>3d render</small>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                          a mollis ipsum tristique eu.
-                        </p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-md-6 col-xl-4 my-gallery__item d-flex align-items-center" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/works/900x1200-portfolio-2.webp" data-image="img/works/900x1200-portfolio-2.webp" class="my-gallery__link link-l-arrow" itemprop="contentUrl" data-size="900x1200">
-                        <img src="img/works/900x1200-portfolio-2.webp" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4>Alien sphere
-                          <small>Matte painting</small>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                          a mollis ipsum tristique eu.
-                        </p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-md-6 col-xl-4 my-gallery__item d-flex align-items-center" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/works/900x1200-portfolio-3.webp" data-image="img/works/900x1200-portfolio-3.webp" class="my-gallery__link link-l-arrow" itemprop="contentUrl" data-size="900x1200">
-                        <img src="img/works/900x1200-portfolio-3.webp" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4>Glow cube
-                          <small>3d render</small>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                          a mollis ipsum tristique eu.
-                        </p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-md-6 col-xl-4 my-gallery__item d-flex align-items-center" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/works/900x1200-portfolio-4.webp" data-image="img/works/900x1200-portfolio-4.webp" class="my-gallery__link link-l-arrow" itemprop="contentUrl" data-size="900x1200">
-                        <img src="img/works/900x1200-portfolio-4.webp" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4>Random blocks
-                          <small>3d render</small>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                          a mollis ipsum tristique eu.
-                        </p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-md-6 col-xl-4 my-gallery__item d-flex align-items-center" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/works/900x1200-portfolio-5.webp" data-image="img/works/900x1200-portfolio-5.webp" class="my-gallery__link link-l-arrow" itemprop="contentUrl" data-size="900x1200">
-                        <img src="img/works/900x1200-portfolio-5.webp" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4>Cute character
-                          <small>3d render</small>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                          a mollis ipsum tristique eu.
-                        </p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-md-6 col-xl-4 my-gallery__item d-flex align-items-center" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/works/900x1200-portfolio-6.webp" data-image="img/works/900x1200-portfolio-6.webp" class="my-gallery__link link-l-arrow" itemprop="contentUrl" data-size="900x1200">
-                        <img src="img/works/900x1200-portfolio-6.webp" class="my-gallery__image" itemprop="thumbnail" alt="Image description">
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4>Arrival
-                          <small>Illustration</small>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio,
-                          a mollis ipsum tristique eu.
-                        </p>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Gallery End -->
-
-              <!-- Inner Section Marquee Start -->
-              <a href="mailto:example@example.com?subject=Message%20from%20your%20site" class="marquee opposite marquee-relative link-l-arrow">
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-              </a>
-              <!-- Inner Section Marquee End -->
-
-            </div>
-          </div>
-          <!-- Inner Section Content End -->
-
-          <!-- Inner Section Media Start -->
-          <div class="col-12 inner__media">
-            <!-- video background -->
-            <div class="video-background">
-              <video id="inner-video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" poster="img/backgrounds/600x1080-video-1.webp">
-                <source type="video/mp4" src="video/video-3.mp4">
-                <source type="video/webm" src="video/video-2.html">
-                <source type="video/ogv" src="video/video-3.html">
-              </video>
-            </div>
-            <!-- colored cover layer -->
-            <div class="color-layer layer-dark-06"></div>
-          </div>
-          <!-- Inner Section Media End -->
-
-        </div>
-      </div>
-    </section>
-    <!-- Inner Portfolio Section End -->
-
-    <!-- Inner Contact Section Start -->
-    <section id="contact" class="inner contact">
-      <div class="container-fluid p-0 fullheight">
-        <div class="row g-0 fullheight">
-
-          <!-- Inner Section Content Start -->
-          <div class="col-12 inner__content">
-            <!-- inner section blocks -->
-            <div class="inner__blocks">
-
-              <!-- Inner Container - Section Title Start -->
-              <div class="inner__container">
-                <div class="content-block">
-                  <span class="section__subtitle">Contact</span>
-                  <h2>Let's get in touch. Welcome to the new office.</h2>
-                  <p class="section__text">Our website is under construction but we are ready to go!
-                    You can call us or leave a request here.
-                    We are always glad to see you in <a class="text-link link-s" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">our office</a> from
-                    <span>9:00</span> to
-                    <span>18:00</span>.
-                  </p>
-                </div>
-              </div>
-              <!-- Inner Container - Section Title End -->
-
-              <!-- Inner Container - Contact Data Start -->
-              <div class="inner__container no-padding contactdata">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 align-items-stretch">
-                    <!-- data single item -->
-                    <div class="col-12 col-md-6 col-xl-3 four-sells-block">
-                      <div class="contactdata__item">
-                        <h5 class="contactdata__title">Office #1</h5>
-                        <p class="contactdata__text"><a class="contact-link link-s" href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA" target="_blank">11 West 53 Street,<br>New York, NY 10019</a></p>
-                      </div>
-                    </div>
-                    <!-- data single item -->
-                    <div class="col-12 col-md-6 col-xl-3 four-sells-block">
-                      <div class="contactdata__item">
-                        <h5 class="contactdata__title">Office #2</h5>
-                        <p class="contactdata__text"><a class="contact-link link-s" href="https://goo.gl/maps/xap5o3MZBuC6DFHz8" target="_blank">3400 Broadway,<br>Oakland, CA 94611</a></p>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-3 four-sells-block">
-                      <div class="contactdata__item">
-                        <h5 class="contactdata__title">Phone</h5>
-                        <p class="contactdata__text">
-                          <a class="contact-link link-s" href="tel:+12127089400">+1 212-708-9400</a>
-                          <br>
-                          <a class="contact-link link-s" href="tel:+15104570211">+1 510-457-0211</a>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-3 four-sells-block">
-                      <div class="contactdata__item">
-                        <h5 class="contactdata__title">Email</h5>
-                        <p class="contactdata__text">
-                          <a class="contact-link link-s" href="mailto:example@example.com?subject=Message%20from%20your%20site">hello@marvio.com</a>
-                          <br>
-                          <a class="contact-link link-s" href="mailto:example@example.com?subject=Message%20from%20your%20site">support@marvio.com</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Contact Data End -->
-
-              <!-- Inner Container - Form Start -->
-              <div class="inner__container no-padding">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 d-flex flex-column-reverse flex-lg-row align-items-stretch">
-                    <div class="col-12 col-lg-6 two-sells-block-reverse">
-                      <div class="padding-block">
-                        <h3>Just say hello!</h3>
-                        <p class="block__text">Want to know more about us, tell us about your project or just to say hello?
-                          Drop me a line and I'll get back as soon as possible.
-                        </p>
-                        <div class="form-container">
-
-                          <!-- Contact Form Reply Group Start -->
-                          <div class="reply-group">
-                            <i class="fa-solid fa-circle-check reply-group__icon"></i>
-                            <p class="reply-group__title light">Done!</p>
-                            <span class="reply-group__text light">Thanks for your message. We will get back as soon as possible</span>
-                          </div>
-                          <!-- Contact Form Reply Group End -->
-      
-                          <!-- Contact Form Start -->
-                          <form class="form form-light contact-form" id="contact-form">
-                            <!-- Hidden Required Fields -->
-                            <input type="hidden" name="project_name" value="Ackley - Coming Soon & Landing Page Template">
-                            <input type="hidden" name="admin_email" value="support@mixdesign.club">
-                            <input type="hidden" name="form_subject" value="Contact Form Message">
-                            <!-- END Hidden Required Fields-->
-                            <input type="text" name="Name" placeholder="Your Name*" required>
-                            <input type="email" name="E-mail" placeholder="Email Adress*" required>
-                            <textarea class="margin-s" name="Message" placeholder="A Few Words*" required></textarea>
-                            <span class="inputs-description">*Required fields</span>
-                            <button class="btn btn-l btn-light link-m-opposite" type="submit">
-                              <span class="btn-caption">Submit</span>
-                            </button>
-                          </form>
-                          <!-- Contact Form End  -->
-      
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6 two-sells-block-reverse">
-                      <div class="media-container padding-block">
-                        <div class="inner__image inner-image-2"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Inner Container - Form End -->
-
-              <!-- Inner Section Marquee Start -->
-              <a href="mailto:example@example.com?subject=Message%20from%20your%20site" class="marquee opposite marquee-relative link-l-arrow">
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-              </a>
-              <!-- Inner Section Marquee End -->
-
-            </div>
-          </div>
-          <!-- Inner Section Content End -->
-
-          <!-- Inner Section Media Start -->
-          <div class="col-12 inner__media">
-
-            <!-- Inner Section Image Background Start -->
-            <div class="media__image media-image-contact"></div>
-            <!-- Inner Section Image Background End -->
-
-          </div>
-          <!-- Inner Section Media End -->
-
-        </div>
-      </div>
-    </section>
-    <!-- Inner Contact Section End -->
-
-    <!-- Notify Popup Start -->
-    <div id="notify" class="popup notify d-md-flex align-items-md-center">
-      <!-- SVG gradient background -->
-      <div class="svg-layer svg-layer-popup"></div>
-      <div class="popup__container">
-        <div class="popup__content">
-
-          <!-- Notify Popup Close Button Start -->
-          <a href="#0" id="notify-close" class="popup-close link-m">
-            <span></span>
-          </a>
-          <!-- Notify Popup Close Button End -->
-
-          <!-- Notify Popup Title Start -->
-          <div class="popup-title">
-            <span class="popup-title__subtitle">
-              <i class="fa-solid fa-paper-plane"></i>
-              Stay tuned
-            </span>
-            <p class="popup-title__title">Get to know about our launch</p>
-            <p class="popup-title__text">Subscribe to our newsletter and we will send you a notification about the launch of our brand new site</p>
-          </div>
-          <!-- Notify Popup Title End -->
-
-          <!-- Notify Form Container Start -->
-          <div class="form-container">
-
-            <!-- Reply Messages Start-->
-            <div class="reply-group subscription-ok">
-              <i class="fa-solid fa-circle-check reply-group__icon"></i>
-              <p class="reply-group__title txt-light">Done!</p>
-              <span class="reply-group__text">Thanks for subscribing. We will send you a notification about our launch.</span>
-            </div>
-            <div class="reply-group subscription-error">
-              <i class="fa-solid fa-face-frown-open reply-group__icon"></i>
-              <p class="reply-group__title">Ooops!</p>
-              <span class="reply-group__text">Something went wrong. Please try again later.</span>
-            </div>
-            <!-- Reply Messages End-->
-
-            <!-- Notify Contact Form Start-->
-            <form class="form notify-form form-light">
-              <input class="block-rounded-s" type="email" placeholder="Your Email" required>
-              <button class="btn btn-l btn-light link-m-opposite" type="submit">
-                <span class="btn-caption">Submit</span>
-              </button>
-            </form>
-            <!-- Notify Contact Form End-->
-
-          </div>
-          <!-- Notify Form Container End -->
-           
-        </div>
-      </div>
-    </div>
-    <!-- Notify Popup End -->
-
-    <!-- Say Hello Popup Start -->
-    <div id="sayhello" class="popup sayhello d-md-flex align-items-md-center">
-      <!-- SVG gradient background -->
-      <div class="svg-layer svg-layer-popup"></div>
-      <div class="popup__container">
-        <div class="popup__content">
-
-          <!-- Say Hello Popup Close Button Start -->
-          <a href="#0" id="sayhello-close" class="popup-close link-m">
-            <span></span>
-          </a>
-          <!-- Say Hello Popup Close Button End -->
-
-          <!-- Say Hello Popup Title Start -->
-          <div class="popup-title">
-            <span class="popup-title__subtitle">
-              <i class="fa-solid fa-hand"></i>
-              Say hello
-            </span>
-            <p class="popup-title__title">Let's work together!</p>
-          </div>
-          <!-- Say Hello Popup Title End -->
-
-          <!-- Say Hello Form Container Start -->
-          <div class="form-container">
-
-            <!-- Reply Messages Start-->
-            <div class="reply-group">
-              <i class="fa-solid fa-circle-check reply-group__icon"></i>
-              <p class="reply-group__title">Done!</p>
-              <span class="reply-group__text">Thanks for your message. We will get back as soon as possible</span>
-            </div>
-            <!-- Reply Messages End-->
-
-            <!-- Say Hello Form Start -->
-            <form class="form form-light sayhello-form" id="sayhello-form">
-              <!-- Hidden Required Fields -->
-              <input type="hidden" name="project_name" value="Ackley - Coming Soon and Landing Page Template">
-              <input type="hidden" name="admin_email" value="support@mixdesign.club">
-              <input type="hidden" name="form_subject" value="Say Hello Form Message">
-              <!-- END Hidden Required Fields-->
-              <div class="container-fluid px-0">
-                <div class="row gx-5">
-                  <div class="col-12 col-md-6">
-                    <input class="" type="text" name="Name" placeholder="Your Name*" required>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <input class="" type="email" name="E-mail" placeholder="Your Email*" required>
-                  </div>
-                  <div class="col-12">
-                    <textarea class="margin-s" name="Message" placeholder="A Few Words*" required></textarea>
-                  </div>
-                  <div class="col-12">
-                    <span class="inputs-description">*Required fields</span>
-                    <button class="btn btn-l btn-light link-m-opposite" type="submit">
-                      <span class="btn-caption">Send</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <!-- Say Hello Form End  -->
-
-          </div>
-          <!-- Say Hello Form Container End -->
-
-        </div>
-      </div>
-    </div>
-    <!-- Say Hello Popup End -->
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-      <!-- Background of PhotoSwipe.
-      It's a separate element, as animating opacity is faster than rgba(). -->
-      <div class="pswp__bg"></div>
-
-      <!-- Slides wrapper with overflow:hidden. -->
-      <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-          <div class="pswp__top-bar">
-
-            <!--  Controls are self-explanatory. Order can be changed. -->
-
-            <div class="pswp__counter"></div>
-
-            <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
-
-            <button class="pswp__button pswp__button--share link-s" title="Share"></button>
-
-            <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
-
-            <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
-
-            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-            <!-- element will get class pswp__preloader-active when preloader is running -->
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-              <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
-
-            <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
-
-            <div class="pswp__caption">
-              <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-      </div>
 
     </div>
+    <!-- end of menu wrapper -->
 
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
+  </header>
+  <!-- END OF site header Menu-->
 
-    <!-- Load Scripts Start -->
-    <script src="js/libs.min.js"></script>
-    <script src="js/gallery-init.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- Load Scripts End -->
-    
-  </body>
+  <!-- BEGIN OF page cover -->
+  <div class="page-cover">
+    <!-- Cover Background -->
+    <div class="cover-bg bg-img" data-image-src="img/bg-default.jpg"></div>
+
+    <!--BEGIN OF Static video bg - uncomment below to use Video as Background-->
+    <div id="container" class="video-container d-none d-sm-block">
+      <video autoplay="autoplay" loop="loop" muted="muted" width="640" height="360">
+        <source src="videos/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!--END OF Static video bg-->
+
+    <!--BEGIN OF Youtube video bg  - uncomment/comment below to use/or not Youtube Video as Background-->
+    <!--<div class='youtube-container video-container show-for-medium-up'>
+				<iframe frameborder="0"
+				src="https://youtube.com/embed/wqeuYB7KMhY?autoplay=1&controls=0&showinfo=0&autohide=1">
+				</iframe>
+			</div>-->
+    <!--END OF Youtube video bg-->
+
+    <!-- Transluscent mask as filter -->
+    <div class="cover-bg-mask bg-color" data-bgcolor="rgba(29, 29, 29, 0.2)"></div>
+  </div>
+  <!--END OF page cover -->
+
+  <!-- BEGIN OF page main content -->
+  @yield('content')
+  <!-- END OF page main content -->
+
+  <!-- BEGIN OF page footer -->
+  
+  <!-- END OF site footer -->
+
+  <!-- scripts -->
+  <!-- All Javascript plugins goes here -->
+  <script src="portal/js/vendor/jquery-1.12.4.min.js"></script>
+
+  <!-- All vendor scripts -->
+  <script src="portal/js/vendor/scrolloverflow.min.js"></script>
+  <script src="portal/js/vendor/all.js"></script>
+  <script src="portal/js/particlejs/particles.min.js"></script>
+
+  <!-- Countdown script -->
+  <script src="portal/js/jquery.downCount.js"></script>
+
+  <!-- Form script -->
+  <script src="portal/js/form_script.js"></script>
+
+  <!-- Javascript main files -->
+  <script src="portal/js/main.js"></script>
 
 
-<!-- Mirrored from mixdesign.club/themeforest/ackley/index-demo-fullscreen-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jun 2024 19:48:23 GMT -->
-</html> 
+</body>
+
+
+</html>
