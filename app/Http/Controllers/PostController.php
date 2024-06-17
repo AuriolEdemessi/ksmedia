@@ -1,187 +1,161 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Post;
+use App\Models\Author;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        $posts=Post::all();
-        return view('index')->with('posts',$posts);
+        $posts = Post::with('images', 'authors')->get();
+        return view('index')->with('posts', $posts);
     }
 
     public function artworks()
     {
-        $posts=Post::all();
-        return view('artworks')->with('posts',$posts);
+        $posts = Post::with('images', 'authors')->where('type', 'artwork')->get();
+        return view('artworks')->with('posts', $posts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        if($request->hasFile("cover")){
-            $file=$request->file("cover");
-            $imageName=time().'_'.$file->getClientOriginalName();
-            $file->move(\public_path("cover/"),$imageName);
+        if ($request->hasFile("cover")) {
+            $file = $request->file("cover");
+            $imageName = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path("cover/"), $imageName);
 
-            $post =new Post([
-                "title" =>$request->title,
-                "author" =>$request->author,
-                "body" =>$request->body,
-                "cover" =>$imageName,
+            $post = new Post([
+                "title" => $request->title,
+                "body" => $request->body,
+                "cover" => $imageName,
+                "type" => $request->type,
+                "category" => $request->category,
             ]);
-           $post->save();
-        }
+            $post->save();
 
-            if($request->hasFile("images")){
-                $files=$request->file("images");
-                foreach($files as $file){
-                    $imageName=time().'_'.$file->getClientOriginalName();
-                    $request['post_id']=$post->id;
-                    $request['image']=$imageName;
-                    $file->move(\public_path("/images"),$imageName);
-                    Image::create($request->all());
-
+            if ($request->authors) {
+                $authorIds = [];
+                foreach ($request->authors as $authorName) {
+                    $author = Author::firstOrCreate(['name' => $authorName]);
+                    $authorIds[] = $author->id;
                 }
+                $post->authors()->sync($authorIds);
             }
 
-            return redirect("/projects");
+            if ($request->hasFile("images")) {
+                $files = $request->file("images");
+                foreach ($files as $file) {
+                    $imageName = time() . '_' . $file->getClientOriginalName();
+                    $request['post_id'] = $post->id;
+                    $request['image'] = $imageName;
+                    $file->move(public_path("/images"), $imageName);
+                    Image::create($request->all());
+                }
+            }
+        }
 
+        return redirect("/projects");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function show(Post $post)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-       $posts=Post::findOrFail($id);
-        return view('edit')->with('posts',$posts);
+        $post = Post::findOrFail($id);
+        return view('edit')->with('post', $post);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
-     $post=Post::findOrFail($id);
-     if($request->hasFile("cover")){
-         if (File::exists("cover/".$post->cover)) {
-             File::delete("cover/".$post->cover);
-         }
-         $file=$request->file("cover");
-         $post->cover=time()."_".$file->getClientOriginalName();
-         $file->move(\public_path("/cover"),$post->cover);
-         $request['cover']=$post->cover;
-     }
+        $post = Post::findOrFail($id);
+        if ($request->hasFile("cover")) {
+            if (File::exists("cover/" . $post->cover)) {
+                File::delete("cover/" . $post->cover);
+            }
+            $file = $request->file("cover");
+            $post->cover = time() . "_" . $file->getClientOriginalName();
+            $file->move(public_path("/cover"), $post->cover);
+            $request['cover'] = $post->cover;
+        }
 
         $post->update([
-            "title" =>$request->title,
-            "author"=>$request->author,
-            "body"=>$request->body,
-            "cover"=>$post->cover,
+            "title" => $request->title,
+            "body" => $request->body,
+            "cover" => $post->cover,
+            "type" => $request->type,
+            "category" => $request->category,
         ]);
 
-        if($request->hasFile("images")){
-            $files=$request->file("images");
-            foreach($files as $file){
-                $imageName=time().'_'.$file->getClientOriginalName();
-                $request["post_id"]=$id;
-                $request["image"]=$imageName;
-                $file->move(\public_path("images"),$imageName);
-                Image::create($request->all());
+        if ($request->authors) {
+            $authorIds = [];
+            foreach ($request->authors as $authorName) {
+                $author = Author::firstOrCreate(['name' => $authorName]);
+                $authorIds[] = $author->id;
+            }
+            $post->authors()->sync($authorIds);
+        }
 
+        if ($request->hasFile("images")) {
+            $files = $request->file("images");
+            foreach ($files as $file) {
+                $imageName = time() . '_' . $file->getClientOriginalName();
+                $request["post_id"] = $id;
+                $request["image"] = $imageName;
+                $file->move(public_path("images"), $imageName);
+                Image::create($request->all());
             }
         }
 
         return redirect("/projects");
-
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-         $posts=Post::findOrFail($id);
+        $post = Post::findOrFail($id);
 
-         if (File::exists("cover/".$posts->cover)) {
-             File::delete("cover/".$posts->cover);
-         }
-         $images=Image::where("post_id",$posts->id)->get();
-         foreach($images as $image){
-         if (File::exists("images/".$image->image)) {
-            File::delete("images/".$image->image);
+        if (File::exists("cover/" . $post->cover)) {
+            File::delete("cover/" . $post->cover);
         }
-         }
-         $posts->delete();
-         return back();
-
-
+        $images = Image::where("post_id", $post->id)->get();
+        foreach ($images as $image) {
+            if (File::exists("images/" . $image->image)) {
+                File::delete("images/" . $image->image);
+            }
+        }
+        $post->delete();
+        return back();
     }
 
-    public function deleteimage($id){
-        $images=Image::findOrFail($id);
-        if (File::exists("images/".$images->image)) {
-           File::delete("images/".$images->image);
-       }
+    public function deleteimage($id)
+    {
+        $image = Image::findOrFail($id);
+        if (File::exists("images/" . $image->image)) {
+            File::delete("images/" . $image->image);
+        }
 
-       Image::find($id)->delete();
-       return back();
-   }
+        $image->delete();
+        return back();
+    }
 
-   public function deletecover($id){
-    $cover=Post::findOrFail($id)->cover;
-    if (File::exists("cover/".$cover)) {
-       File::delete("cover/".$cover);
-   }
-   return back();
+    public function deletecover($id)
+    {
+        $cover = Post::findOrFail($id)->cover;
+        if (File::exists("cover/" . $cover)) {
+            File::delete("cover/" . $cover);
+        }
+        return back();
+    }
 }
 
-
-}
