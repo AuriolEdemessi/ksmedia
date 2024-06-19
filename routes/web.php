@@ -1,6 +1,12 @@
 <?php
-use App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\CategoryController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -8,51 +14,48 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
-// Route for the welcome page without auth middleware
-Route::get('/', function(){
-    return view('portal');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/artworks', [PostController::class, 'artworks']);
 
-Route::get('/admin', function(){
+// Routes for Authors
+Route::get('/authors', [AuthorController::class, 'index'])->name('authors.index');
+Route::get('/authors/create', [AuthorController::class, 'create'])->name('authors.create');
+Route::post('/authors', [AuthorController::class, 'store'])->name('authors.store');
+Route::get('/authors/{author}', [AuthorController::class, 'show'])->name('authors.show');
+Route::get('/authors/{author}/edit', [AuthorController::class, 'edit'])->name('authors.edit');
+Route::put('/authors/{author}', [AuthorController::class, 'update'])->name('authors.update');
+Route::delete('/authors/{author}', [AuthorController::class, 'destroy'])->name('authors.destroy');
+
+// Routes for Categories
+Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
+Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
+Route::get('/categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+Route::put('/categories/{category}', [CategoryController::class, 'update'])->name('categories.update');
+Route::delete('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+Route::get('/admin', function () {
     return view('admin.index');
-});
-
-// Grouping routes that require authentication
-Route::middleware(['auth'])->group(function () {
-    // Routes inside this group will require authentication
-
-    Route::get('/projects', [PostController::class, 'index']);
-
-    Route::get('/create', function(){
-        return view('create');
-    });
+})->name('admin.index');
 
 
-    Route::get('/team', function(){
-        return view('team');
-    });
-
-
-    Route::get('/exhibitions', function(){
-        return view('exhibitions');
-    });
-
-    Route::post('/post', [PostController::class, 'store']);
-    Route::delete('/delete/{id}', [PostController::class, 'destroy']);
-    Route::get('/edit/{id}', [PostController::class, 'edit']);
-    Route::delete('/deleteimage/{id}', [PostController::class, 'deleteimage']);
-    Route::delete('/deletecover/{id}', [PostController::class, 'deletecover']);
-    Route::put('/update/{id}', [PostController::class, 'update']);
-
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-});
-
-// Auth routes for login, register, etc.
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
