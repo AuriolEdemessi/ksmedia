@@ -14,6 +14,35 @@ class Post extends Model implements HasMedia
 
     protected $fillable = ['title', 'type', 'author', 'description', 'category'];
 
+    // append cover and images to the Post model
+    protected $appends = ['cover', 'photos'];
+
+    public function getCoverAttribute()
+    {
+        // cover is in the collection cover
+        $cover = $this->getFirstMedia('cover');
+        if ($cover) {
+            $url =  $cover->getUrl();
+            // replace localhost with localhost:8000
+            return str_replace('localhost', 'localhost:8000', $url);
+        }
+        return null;
+        
+    }
+
+    public function getPhotosAttribute()
+    {
+        // return array of photos in collection photos
+        $photos = [];
+        foreach ($this->getMedia('photos') as $media) {
+            // replace localhost with localhost:8000
+            $url = str_replace('localhost', 'localhost:8000', $media->getUrl());
+            $photos[] = $url;
+        }
+        return $photos;
+        
+    }
+
     public function authors()
     {
         return $this->belongsToMany(Author::class);

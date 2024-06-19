@@ -6,11 +6,11 @@
     <p>{{ $post->description }}</p>
 
     <h2>Cover</h2>
-    <img src="{{ $post->getFirstMediaUrl('cover') }}" alt="Cover Image">
+    <img src="{{ $post->cover }}" alt="Cover Image">
 
     <h2>Photos</h2>
-    @foreach($post->getMedia('photos') as $photo)
-        <img src="{{ $photo->getUrl() }}" alt="Photo">
+    @foreach($post->photos as $photo)
+        <img src="{{ $photo }}" alt="Photo">
     @endforeach
 </div>
 @endsection
