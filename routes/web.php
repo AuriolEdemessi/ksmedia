@@ -20,6 +20,10 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
+    return view('portal');
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
