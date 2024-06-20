@@ -40,7 +40,7 @@
                         </h1>
                         
                         <div class="headline__btnholder d-flex flex-column flex-md-row">
-                          <a href="/portfolio" class="d-flex justify-content-center justify-content-md-start btn btn-s btn-icon-left btn-light link-s">
+                          <a href="/posts" class="d-flex justify-content-center justify-content-md-start btn btn-s btn-icon-left btn-light link-s">
                             <h3 class="headline__title large"><span class="btn-title">DISCOVER <b>US</b></span>
                             <span class="btn-icon-anim"><i class="fa-solid fa-arrow-right"></i></span></h3>
                           </a>
@@ -62,20 +62,20 @@
         </div>
 
         <!-- Main Section Marquee Start -->
-        <a href="mailto:example@example.com?subject=Message%20from%20your%20site" class="marquee link-l-arrow">
+        <a href="mailto:info@kerawaspace.com" class="marquee link-l-arrow">
           <div class="marquee-content scroll">
             <span>Contact</span>
-            <span>Let's talk</span>
+            
             <span>Get in touch</span>
           </div>
           <div class="marquee-content scroll">
             <span>Contact</span>
-            <span>Let's talk</span>
+            
             <span>Get in touch</span>
           </div>
           <div class="marquee-content scroll">
             <span>Contact</span>
-            <span>Let's talk</span>
+            
             <span>Get in touch</span>
           </div>
         </a>

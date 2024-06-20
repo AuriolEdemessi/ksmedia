@@ -76,7 +76,7 @@
 
         <!-- Say Hello Button Start -->
         <div class="controls__block d-flex align-items-center">
-          <a href="#0" id="sayhello-trigger" class="btn sayhello-trigger link-l">
+          <a href="/login" class="btn sayhello-trigger link-l">
             <i class="fa-solid fa-pencil"></i>
             <span>JOIN US</span>
           </a>
@@ -109,12 +109,7 @@
                   <span>Twitter</span>
                 </a>
               </li>
-              <li>
-                <a class="link-s" href="https://dribbble.com/" target="_blank">
-                  <i class="fa-brands fa-dribbble"></i>
-                  <span>Dribbble</span>
-                </a>
-              </li>
+              
               <li>
                 <a class="link-s" href="https://www.tiktok.com/" target="_blank">
                   <i class="fa-brands fa-tiktok"></i>
@@ -185,42 +180,42 @@
                           </div>
                         </li>
                         <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="about-trigger">About Us</a>
+                          <a class="navigation__link link-l-arrow" href="#0" id="about-trigger">Our History</a>
                           <div class="marquee-link">
                             <div class="marquee-link-content scroll-x2">
-                              <span>About Us</span>
-                              <span>About Us</span>
-                              <span>About Us</span>
+                              <span>Our History</span>
+                              <span>Our History</span>
+                              <span>Our History</span>
                             </div>
                             <div class="marquee-link-content scroll-x2">
-                              <span>About Us</span>
-                              <span>About Us</span>
-                              <span>About Us</span>
+                              <span>Our History</span>
+                              <span>Our History</span>
+                              <span>Our History</span>
                             </div>
                             <div class="marquee-link-content scroll-x2">
-                              <span>About Us</span>
-                              <span>About Us</span>
-                              <span>About Us</span>
+                              <span>Our History</span>
+                              <span>Our History</span>
+                              <span>Our History</span>
                             </div>
                           </div>
                         </li>
                         <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="works-trigger">Portfolio</a>
+                          <a class="navigation__link link-l-arrow" href="#0" id="works-trigger">Artworks</a>
                           <div class="marquee-link">
                             <div class="marquee-link-content scroll-x2">
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
+                              <span>Artworks</span>
+                              <span>Artworks</span>
+                              <span>Artworks</span>
                             </div>
                             <div class="marquee-link-content scroll-x2">
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
+                              <span>Artworks</span>
+                              <span>Artworks</span>
+                              <span>Artworks</span>
                             </div>
                             <div class="marquee-link-content scroll-x2">
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
-                              <span>Portfolio</span>
+                              <span>Artworks</span>
+                              <span>Artworks</span>
+                              <span>Artworks</span>
                             </div>
                           </div>
                         </li>
