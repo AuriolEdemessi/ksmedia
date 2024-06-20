@@ -26,7 +26,7 @@ class PostController extends Controller
             'author_id.*' => 'integer|exists:authors,id',
             'description' => 'required|string',
             'cover' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:20480',
         ]);
 
         $post = Post::create($validatedData);
@@ -55,5 +55,31 @@ class PostController extends Controller
     {
         $posts = Post::all();
         return view('posts.index', compact('posts'));
+    }
+
+    public function manageposts()
+    {
+        $posts = Post::all();
+        return view('admin.manageposts', compact('posts'));
+    }
+
+    public function edit($id)
+    {
+        $post = Post::find($id);
+        return view('posts.edit', compact('post'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $post = Post::find($id);
+        $post->update($request->all());
+        return redirect()->route('posts.index')->with('success', 'Post updated successfully');
+    }
+
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+        return redirect()->route('posts.index')->with('success', 'Post deleted successfully');
     }
 }

@@ -1,31 +1,4 @@
-@extends('layouts.admin')
-
-@section('content')
-
-
-
-@extends('layouts.admin')
-
-@section('content')
-
-
-
-  <div class="offcanvas-wrap">
-    <section class="split">
-      <div class="container">
-        <div class="row justify-content-between">
-
-          @include('layouts.aside')
-
-          <div class="col-lg-9 split-content">
-
-            <section>
-
-            <div class="row">
-
-
-                
-            <div class="container">
+<div class="container">
                     <h1>Create Post</h1>
                     <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -79,33 +52,3 @@
                         <button type="submit" class="btn btn-primary">Create Post</button>
                     </form>
                 </div>
-            </div>
-
-              
-            </section>
-
-
-            <!-- notifications -->
-            
-
-            <!-- password -->
-            
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- footer -->
-     
- </div>
-
-@endsection
-
-
-
-
-
-
-@endsection

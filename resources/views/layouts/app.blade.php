@@ -112,6 +112,7 @@
                   <a class="HeaderNav-item" href="/team">Team</a>
                   <a class="HeaderNav-item" href="/exhibitions">Exhibitions</a>
                   <a class="HeaderNav-item" href="/contact">CONTACT</a>
+                  <a class="HeaderNav-item" href="/admin">ADMIN</a>
                 </nav>
                 <button class="HeaderFlyoutMobile-toggle" title="More" id="mobileMenuButton">Menu</button> <!-- Ajoutez l'ID "mobileMenuButton" -->
             </header>
@@ -132,19 +133,27 @@
                         </form>
                     </div>
                 </section>
+                                
+                <section id="section-a">
                 <section class="FooterContent-item FooterLinks">
                     <nav class="FooterLinksList">
-                        <a class="FooterLinksList-item" href="/about">About us</a>
-                        <a class="FooterLinksList-item" href="/legacy">The Legacy</a>
+                        <a class="FooterLinksList-item" href="https://kerawaspace.com/">Home</a>
+                        
+                        <a class="FooterLinksList-item" href="/projects">Projects</a>
+                        <a class="FooterLinksList-item" href="/team">Team</a>
+                        <a class="FooterLinksList-item" href="/exhibitions">Exhibitions</a>
+                        <a class="FooterLinksList-item" href="/contact">CONTACT</a>
                     </nav>
                     <nav class="FooterLinksList">
-                        <a class="FooterLinksList-item" href="#">Youtube</a>
-                        <a class="FooterLinksList-item" href="#">Facebook</a>
-                        <a class="FooterLinksList-item" href="#">Instagram</a>
-                        <a class="FooterLinksList-item" href="#">Spotify</a>
-                        <a class="FooterLinksList-item" href="#">TikTok</a>
+                        <a class="FooterLinksList-item" href="">Youtube</a>
+                        <a class="FooterLinksList-item" href="">Facebook</a>
+                        <a class="FooterLinksList-item" href="">Instagram</a>
+                        <a class="FooterLinksList-item" href="">Spotify</a>
+                        <a class="FooterLinksList-item" href="">TikTok</a>
                     </nav>
                 </section>
+                </section>
+
                 <section class="FooterContent-item FooterSubmit">
                     <div class="FooterSubmit-text">
                         <p>Contact us for a collaboration.</p>
@@ -175,6 +184,59 @@
             </div>
         </div>
     </div>
+
+
+
+    <script>
+    // Fonction pour rediriger vers la section
+    function scrollToSection() {
+        var section = document.getElementById("section-a");
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Ajouter un écouteur d'événement au bouton
+    var btn = document.getElementById("mobileMenuButton");
+    btn.addEventListener("click", scrollToSection);
+</script>
+
+    <script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 
     <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
