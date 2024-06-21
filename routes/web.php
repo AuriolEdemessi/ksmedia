@@ -59,7 +59,7 @@ Route::get('/admin', function () {
     return view('admin.index');
 })->name('admin.index');
 
-Route::get('/manageposts', [PostController::class, 'manageposts'])->name('manageposts');
+Route::get('/manageposts', [PostController::class, 'manageposts'])->name('admin.manageposts');
 
 Auth::routes();
 

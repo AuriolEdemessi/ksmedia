@@ -4,12 +4,6 @@
 
 
 
-@extends('layouts.admin')
-
-@section('content')
-
-
-
   <div class="offcanvas-wrap">
     <section class="split">
       <div class="container">
@@ -36,10 +30,10 @@
                     @foreach($posts as $post)
                         <div class="col-md-3">
                             <div class="card mb-4">
-                                <img src="{{ asset('storage/' . $post->cover) }}" class="card-img-top" alt="{{ $post->title }}">
+                                <img src="{{ $post->cover }}" class="card-img-top" alt="{{ $post->title }}">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $post->title }}</h5>
-                                    <p class="card-text">{{ $post->description }}</p>
+                                    <!--<p class="card-text">{{ $post->description }}</p>-->
                                     <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-primary">Edit</a>
                                     <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="d-inline">
                                         @csrf
@@ -81,8 +75,3 @@
 @endsection
 
 
-
-
-
-
-@endsection
