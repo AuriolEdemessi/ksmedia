@@ -11,6 +11,7 @@ class PostController extends Controller
 {
     public function create()
     {
+    
         $categories = Category::all();
         $authors = Author::all();
         return view('posts.create', compact('categories', 'authors'));
@@ -64,22 +65,35 @@ class PostController extends Controller
     }
 
     public function edit($id)
-    {
-        $post = Post::find($id);
-        return view('posts.edit', compact('post'));
+{
+    $post = Post::find($id);
+    if (!$post) {
+        abort(404); // Gérer le cas où le post n'est pas trouvé
     }
+    return view('posts.edit', compact('post'));
+}
 
-    public function update(Request $request, $id)
-    {
-        $post = Post::find($id);
-        $post->update($request->all());
-        return redirect()->route('admin.manageposts')->with('success', 'Post updated successfully');
+public function update(Request $request, $id)
+{
+    $post = Post::find($id);
+    if (!$post) {
+        abort(404); // Gérer le cas où le post n'est pas trouvé
     }
+    $validatedData = $request->validate([
+        // Validation des données
+    ]);
+    $post->update($validatedData);
+    return redirect()->route('admin.manageposts')->with('success', 'Post updated successfully');
+}
 
-    public function destroy($id)
-    {
-        $post = Post::find($id);
-        $post->delete();
-        return redirect()->route('admin.manageposts')->with('success', 'Post deleted successfully');
+public function destroy($id)
+{
+    $post = Post::find($id);
+    if (!$post) {
+        abort(404); // Gérer le cas où le post n'est pas trouvé
     }
+    $post->delete();
+    return redirect()->route('admin.manageposts')->with('success', 'Post deleted successfully');
+}
+
 }

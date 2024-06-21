@@ -78,8 +78,8 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-photo-{{ ($key - 1 + count($post->photos)) % count($post->photos) }}">Previous</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#modal-photo-{{ ($key + 1) % count($post->photos) }}">Next</button>
+                               <!-- <button type="button" class="btn btn-primary prev-btn" data-current="{{ $key }}">Previous</button>
+                                <button type="button" class="btn btn-primary next-btn" data-current="{{ $key }}">Next</button>-->
                             </div>
                         </div>
                     </div>
@@ -115,22 +115,28 @@
 <!-- JavaScript for modal navigation -->
 <script>
     $(document).ready(function(){
+        function updateModal(current) {
+            var total = {{ count($post->photos) }};
+            var prev = (current - 1 + total) % total;
+            var next = (current + 1) % total;
+            return { prev: prev, next: next };
+        }
+
         $('.prev-btn').click(function(){
             var current = parseInt($(this).data('current'));
-            var prev = (current - 1 + {{ count($post->photos) }}) % {{ count($post->photos) }};
-            $('#modal-photo-' + prev).modal('show');
+            var indices = updateModal(current);
+            $('#modal-photo-' + indices.prev).modal('show');
             $('#modal-photo-' + current).modal('hide');
         });
 
         $('.next-btn').click(function(){
             var current = parseInt($(this).data('current'));
-            var next = (current + 1) % {{ count($post->photos) }};
-            $('#modal-photo-' + next).modal('show');
+            var indices = updateModal(current);
+            $('#modal-photo-' + indices.next).modal('show');
             $('#modal-photo-' + current).modal('hide');
         });
     });
 </script>
-
 
 
 

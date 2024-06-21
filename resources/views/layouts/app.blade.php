@@ -45,7 +45,7 @@
     </script>
 
     <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=445551599402428&amp;ev=PageView&amp;noscript=1"/>
+        <img height="1" width="1" style="display:none" src=""/>
     </noscript>
     
     <title>Kerawa Space - Home</title>
@@ -112,14 +112,26 @@
         <div class="Shell">
             <header class="Header">
                 <h2>
-                  &nbsp;&nbsp;<a href="/">KERAWA SPACE</a>
+                &nbsp;&nbsp;<a href="/"><img src="{{ asset('assets/brand/logo.png') }}" style="width: 60%;"></a>
                 </h2>
                 <nav class="HeaderNav" id="mobileMenu"> <!-- Ajoutez l'ID "mobileMenu" -->
                   <a class="HeaderNav-item" href="/posts">Projects</a>
                   <a class="HeaderNav-item" href="/team">Team</a>
                   <a class="HeaderNav-item" href="/exhibitions">Exhibitions</a>
                   <a class="HeaderNav-item" href="/contact">CONTACT</a>
-                  <a class="HeaderNav-item" href="/admin">ADMIN</a>
+                  @auth
+                    @if (Auth::user()->isAdmin())
+                        <a class="HeaderNav-item" href="/admin">MY ADMIN SPACE</a>
+                    @endif
+                    @if (Auth::user()->isMember())
+                        <a class="HeaderNav-item" href="/home">MY SPACE</a>
+                        <a class="HeaderNav-item" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        </form>
+                    @endif
+                @endauth
+
                 </nav>
                 <button class="HeaderFlyoutMobile-toggle" title="More" id="mobileMenuButton">Menu</button> <!-- Ajoutez l'ID "mobileMenuButton" -->
             </header>
@@ -146,7 +158,7 @@
                     <nav class="FooterLinksList">
                         <a class="FooterLinksList-item" href="https://kerawaspace.com/">Home</a>
                         
-                        <a class="FooterLinksList-item" href="/projects">Projects</a>
+                        <a class="FooterLinksList-item" href="/posts">Projects</a>
                         <a class="FooterLinksList-item" href="/team">Team</a>
                         <a class="FooterLinksList-item" href="/exhibitions">Exhibitions</a>
                         <a class="FooterLinksList-item" href="/contact">CONTACT</a>
@@ -177,7 +189,7 @@
             </nav>
         </section>
 
-        <a href="/player" class="SpotifyPlayerToggle" target="cxsSpotifyPlayer">
+        <a href="/" class="SpotifyPlayerToggle" target="cxsSpotifyPlayer">
             Open Player<span></span><span></span><span></span><span></span>
         </a>
         <button class="ThemeToggle">Toggle Darkmode</button>
