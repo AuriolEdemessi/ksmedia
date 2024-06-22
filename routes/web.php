@@ -27,6 +27,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 
 // Routes for Authors
 Route::get('/authors', [AuthorController::class, 'index'])->name('authors.index');
@@ -38,12 +42,16 @@ Route::put('/authors/{author}', [AuthorController::class, 'update'])->name('auth
 Route::delete('/authors/{author}', [AuthorController::class, 'destroy'])->name('authors.destroy');
 
 Route::get('/team', [TeamMemberController::class, 'index'])->name('team.index');
+
+Route::get('/manageteam', [TeamMemberController::class, 'manageteam'])->name('admin.manageteam');
+
     Route::get('/team/create', [TeamMemberController::class, 'create'])->name('team.create');
     Route::post('/team', [TeamMemberController::class, 'store'])->name('team.store');
     Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('team.show');
     Route::get('/team/{teamMember}/edit', [TeamMemberController::class, 'edit'])->name('team.edit');
     Route::put('/team/{teamMember}', [TeamMemberController::class, 'update'])->name('team.update');
     Route::delete('/team/{teamMember}', [TeamMemberController::class, 'destroy'])->name('team.destroy');
+    Route::delete('/team/{id}', [TeamMemberController::class, 'destroy'])->name('team.destroy');
 
 // Routes for Categories
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');

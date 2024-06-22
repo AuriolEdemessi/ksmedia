@@ -20,6 +20,12 @@ class TeamMemberController extends Controller
         return view('team.index', compact('founder', 'teamMembers'));
     }
 
+    public function manageteam()
+    {
+        $teamMembers = TeamMember::all();
+        return view('admin.manageteam', compact('teamMembers'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -56,7 +62,7 @@ class TeamMemberController extends Controller
 
         $teamMember->save();
 
-        return redirect()->route('team.index')->with('success', 'Team member added successfully');
+        return redirect()->route('admin.manageteam')->with('success', 'Team member added successfully');
     }
 
     /**
@@ -108,7 +114,7 @@ class TeamMemberController extends Controller
 
         $teamMember->save();
 
-        return redirect()->route('team.index')->with('success', 'Team member updated successfully');
+        return redirect()->route('admin.manageteam')->with('success', 'Team member updated successfully');
     }
 
     /**
@@ -119,9 +125,15 @@ class TeamMemberController extends Controller
      */
     public function destroy(TeamMember $teamMember)
     {
-        Storage::delete($teamMember->profile_picture);
+        $teamMember = TeamMember::findOrFail($id);
+        
+        // Suppression de l'image de profil si elle existe
+        if ($teamMember->profile_picture) {
+            Storage::delete($teamMember->profile_picture);
+        }
+
         $teamMember->delete();
-        return redirect()->route('team.index')->with('success', 'Team member deleted successfully');
+        return redirect()->route('admin.manageteam')->with('success', 'Team member deleted successfully');
     }
 }
 

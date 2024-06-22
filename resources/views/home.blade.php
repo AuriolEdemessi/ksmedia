@@ -8,7 +8,7 @@
     <section class="FooterTeaser">
         <div class="Teasers items--3">
             <div class="Teasers-item">
-                <a class="{{ route('posts.index') }}" href="rosyne.html">
+                <a class="" href="{{ route('posts.index') }}">
                     <figure class="Teasers-item-image Image" >
                         <img src="images/rosyne.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
                     </figure>
@@ -18,55 +18,28 @@
                 </a>
             </div>
             <div class="Teasers-item">
-                <a class="" href="{{ route('posts.create') }}">
+                <a class="" href="{{ route('team.index') }}">
                     <figure class="Teasers-item-image Image" >
                         <img src="images/men1.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
                     </figure>
                     <div class="Teasers-item-info">
-                        <span class="Teasers-item-cta">ADD NEW POST</span>
+                        <span class="Teasers-item-cta">OUR TEAM</span>
                     </div>
                 </a>
             </div>
             <div class="Teasers-item">
-                <a class="" href="{{ route('categories.index') }}">
+                <a class="" href="/contact">
                     <figure class="Teasers-item-image Image" >
                         <img src="images/vogue.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
                     </figure>
                     <div class="Teasers-item-info">
-                        <span class="Teasers-item-cta">OUR CATEGORIES</span>
+                        <span class="Teasers-item-cta">CONTACT US</span>
                     </div>
                 </a>
             </div>
-            <div class="Teasers-item">
-                                    <a class="" href="{{ route('categories.create') }}">
-                                        <figure class="Teasers-item-image Image" >
-                                            <img src="images/11.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
-                                        </figure>
-                                        <div class="Teasers-item-info">
-                                            <span class="Teasers-item-cta">ADD NEW CATEGORY</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="Teasers-item">
-                                    <a class="" href="">
-                                        <figure class="Teasers-item-image Image" >
-                                            <img src="images/melissa.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
-                                        </figure>
-                                        <div class="Teasers-item-info">
-                                            <span class="Teasers-item-cta">ADD NEW TEAM MEMBER</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="Teasers-item">
-                                    <a class="" href="{{ route('authors.create') }}">
-                                        <figure class="Teasers-item-image Image" >
-                                            <img src="images/ateliervo.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
-                                        </figure>
-                                        <div class="Teasers-item-info">
-                                            <span class="Teasers-item-cta">ADD NEW AUTHOR</span>
-                                        </div>
-                                    </a>
-                                </div>
+            
+                                
+                                
             
             
             

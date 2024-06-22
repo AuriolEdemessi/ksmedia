@@ -12,8 +12,8 @@
               <!-- Inner Container - Section Title Start -->
               <div class="inner__container">
                 <div class="content-block">
-                  <span class="section__subtitle">About Us</span>
-                  <h2>Creativity is above all. Just awesome template.</h2>
+                  
+                  <h2>Aesthetic because we are.</h2>
                   <p class="section__text">I wonder if I've been changed in the night? Let me think.
                     Was I the same when I got up this morning? I almost think I can remember feeling a little different.
                     But if I'm not the same, the <a class="text-link link-s" href="#" target="_blank">next question</a> is 'Who in the world am I?' Ah, that's the great puzzle!
@@ -71,77 +71,11 @@
               <!-- Inner Container - Features End -->
 
               <!-- Inner Container - Video Start -->
-              <div class="inner__container no-padding">
-                <div class="fullwidth-container padding-block">
-                  <div class="showreel showreel-image-1">
-                    <div class="showreel__button">
-                      <!-- video trigger -->
-                      <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger link-l-opposite">
-                        <img src="img/svg/110x110-showreel-filled.svg" alt="Ackley - Coming Soon and Landing Page Template">
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               <!-- Inner Container - Video End -->
 
               <!-- Inner Container - Skillbars Start -->
-              <div class="inner__container no-padding">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 d-flex flex-column-reverse flex-lg-row align-items-stretch">
-                    <div class="col-12 col-lg-6 two-sells-block-reverse">
-                      <div class="media-container padding-block">
-                        <!-- inner image -->
-                        <div class="inner__image inner-image-1"></div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-6 two-sells-block-reverse">
-                      <div class="padding-block">
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="96">
-                            <span class="skillbar-title">UI/UX Design</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="90">
-                            <span class="skillbar-title">Logo Design</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="83">
-                            <span class="skillbar-title">Branding</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="87">
-                            <span class="skillbar-title">3D Modeling</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                        <!-- skillbar single item -->
-                        <div class="show-skillbar">
-                          <div class="skillbar" data-percent="98">
-                            <span class="skillbar-title">Illustrations</span>
-                            <p class="skillbar-bar"></p>
-                            <span class="skill-bar-percent"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               <!-- Inner Container - Skillbars End -->
 
               <!-- Inner Container - Quote Start -->
@@ -175,18 +109,7 @@
               <!-- Inner Container - Quote End -->
 
               <!-- Inner Section Marquee Start -->
-              <a href="mailto:example@example.com?subject=Message%20from%20your%20site" class="marquee opposite marquee-relative link-l-arrow">
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-                <div class="marquee-content scroll">
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                  <span>hello@yourdomain.com</span>
-                </div>
-              </a>
+              
               <!-- Inner Section Marquee End -->
 
             </div>
@@ -201,9 +124,9 @@
               <div class="swiper-inner">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
+                  <!-- Slides 
                   <div class="swiper-slide inner-slide inner-slide-1"></div>
-                  <div class="swiper-slide inner-slide inner-slide-2"></div>
+                  <div class="swiper-slide inner-slide inner-slide-2"></div>-->
                 </div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-nav-block-ackley dark">

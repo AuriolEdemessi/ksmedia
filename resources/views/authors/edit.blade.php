@@ -1,22 +1,44 @@
-<!-- resources/views/authors/edit.blade.php -->
-
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Edit Author</h2>
-            <form action="{{ route('authors.update', $author->id) }}" method="POST">
-                @csrf
-                @method('PUT')
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $author->name }}">
+
+<div class="offcanvas-wrap">
+    <section class="split">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                @include('layouts.aside')
+
+                <div class="col-lg-9 split-content">
+
+                    <section>
+                        <div class="row">
+                            <div class="col-lg-10">
+
+                                <h3 class="fs-4">Edit Author</h3>
+
+                                <div class="card bg-opaque-white">
+                                    <div class="card-body bg-white">
+
+                                        <form action="{{ route('authors.update', $author->id) }}" method="POST">
+                                            @csrf
+                                            @method('PUT')
+                                            <div class="form-group">
+                                                <label for="name" class="form-label">Name:</label>
+                                                <input type="text" class="form-control" id="name" name="name" value="{{ $author->name }}">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Update</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
-                <button type="submit" class="btn btn-primary">Update</button>
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 </div>
+
 @endsection

@@ -200,7 +200,7 @@
                           </div>
                         </li>
                         <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="works-trigger">Artworks</a>
+                          <a class="navigation__link link-l-arrow" href="/posts" id="works-trigger">Artworks</a>
                           <div class="marquee-link">
                             <div class="marquee-link-content scroll-x2">
                               <span>Artworks</span>
@@ -220,7 +220,7 @@
                           </div>
                         </li>
                         <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="contact-trigger">Contact</a>
+                          <a class="navigation__link link-l-arrow" href="/contact">Contact</a>
                           <div class="marquee-link">
                             <div class="marquee-link-content scroll-x2">
                               <span>Contact</span>

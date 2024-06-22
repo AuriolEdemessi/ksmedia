@@ -32,7 +32,7 @@
             <div class="Teasers-item">
                 <a class="" href="">
                     <figure class="Teasers-item-image Image" >
-                        <img src="images/vo.gif" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
+                        <img src="images/kerawa.gif" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
                     </figure>
                     <div class="Teasers-item-info">
                         <span class="Teasers-item-cta">WAIT FOR SOME EXHIBITIONS</span>
@@ -40,9 +40,9 @@
                 </a>
             </div>
             <div class="Teasers-item">
-                <a class="" href="">
+                <a class="" href="/posts">
                     <figure class="Teasers-item-image Image" >
-                        <img src="images/vo.gif" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
+                        <img src="images/men0.jpg" class="Teasers-item-image-img " width="1707" height="2560"  data-sizes="auto" data-optimumx="2"/>
                     </figure>
                     <div class="Teasers-item-info">
                         <span class="Teasers-item-cta">Review all the projects</span>
