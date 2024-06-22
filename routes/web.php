@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
-
+use App\Http\Controllers\TeamMemberController;
 
 
 
@@ -37,6 +37,14 @@ Route::get('/authors/{author}/edit', [AuthorController::class, 'edit'])->name('a
 Route::put('/authors/{author}', [AuthorController::class, 'update'])->name('authors.update');
 Route::delete('/authors/{author}', [AuthorController::class, 'destroy'])->name('authors.destroy');
 
+Route::get('/team', [TeamMemberController::class, 'index'])->name('team.index');
+    Route::get('/team/create', [TeamMemberController::class, 'create'])->name('team.create');
+    Route::post('/team', [TeamMemberController::class, 'store'])->name('team.store');
+    Route::get('/team/{teamMember}', [TeamMemberController::class, 'show'])->name('team.show');
+    Route::get('/team/{teamMember}/edit', [TeamMemberController::class, 'edit'])->name('team.edit');
+    Route::put('/team/{teamMember}', [TeamMemberController::class, 'update'])->name('team.update');
+    Route::delete('/team/{teamMember}', [TeamMemberController::class, 'destroy'])->name('team.destroy');
+
 // Routes for Categories
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
@@ -54,6 +62,8 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
 Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
 Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+
+Route::get('/exhibitions', [PostController::class, 'exhibitions'])->name('exhibitions.index');
 
 Route::get('/admin', function () {
     return view('admin.index');

@@ -86,6 +86,14 @@ public function update(Request $request, $id)
     return redirect()->route('admin.manageposts')->with('success', 'Post updated successfully');
 }
 
+
+public function exhibitions()
+{
+    $exhibitionPosts = Post::where('type', 'exhibition')->get();
+    return view('posts.exhibitions', compact('exhibitionPosts'));
+}
+
+
 public function destroy($id)
 {
     $post = Post::find($id);
