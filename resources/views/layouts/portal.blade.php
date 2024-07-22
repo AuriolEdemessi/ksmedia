@@ -1,361 +1,139 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
 
-  
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
+<!-- Mirrored from themezinho.net/annusa/index-video-bg.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jun 2024 16:11:11 GMT -->
 <head>
-    <meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#4237ef"/>
+<meta name="HandheldFriendly" content="true" />
+<title>Kerawa Space | Home</title>
+<meta name="author" content="Themezinho">
+<meta name="description" content="Kerawa Space">
+<meta name="keywords" content="creative, works, showcase, portfolio, highlight, projects, modern, agency, digital, studio, css, animation, transition, freelancers">
 
-    <!-- Page Title -->
-    <title>KERAWA SPACE | HOME</title>
+<!-- SOCIAL MEDIA META -->
+<meta property="og:description" content="Kerawa Space">
+<meta property="og:image" content="preview.html">
+<meta property="og:site_name" content="annusa">
+<meta property="og:title" content="annusa">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://www.themezinho.net/annusa">
 
-    <!-- Meta Tags -->
-    <meta name="description" content="Ackley - bold and clean coming soon and landing page template to kick-start your project">
-    <meta name="keywords" content="ackley, coming soon, under construction, template, coming soon page, html5, css3, fashion, elegant">
-    <meta name="author" content="CODEO | CRACLAB">
+<!-- TWITTER META -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@annusa">
+<meta name="twitter:creator" content="@annusa">
+<meta name="twitter:title" content="annusa">
+<meta name="twitter:description" content="Kerawa Space">
+<meta name="twitter:image" content="preview.html">
 
-    <!-- Viewport Meta-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- FAVICON FILES -->
+<link href="ico/apple-touch-icon-180-precomposed.png" rel="apple-touch-icon" sizes="180x180">
+<link href="ico/apple-touch-icon-152-precomposed.png" rel="apple-touch-icon" sizes="152x152">
+<link href="ico/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+<link href="ico/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon" sizes="114x114">
+<link href="ico/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon" sizes="72x72">
+<link href="ico/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon">
+<link href="ico/favicon.png" rel="shortcut icon">
 
-    <!-- Template Favicon & Icons Start -->
-    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="img/favicon/manifest.webmanifest">
-    <!-- Template Favicon & Icons End -->
-
-    <!-- Facebook Metadata Start -->
-    <meta property="og:image:height" content="1200">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:title" content="Ackley - Coming Soon and Landing Page Template">
-    <meta property="og:description" content="Ackley - bold and clean coming soon and landing page template to kick-start your project">
-    <meta property="og:url" content="index.html">
-    <meta property="og:image" content="favicon/og-image-2.html">
-    <!-- Facebook Metadata End -->
-
-    <!-- Template Styles Start -->
-    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!-- Template Styles End -->
-
-    <!-- Custom Browser Color Start -->
-    <meta name="theme-color" content="#10102b">
-    <meta name="msapplication-navbutton-color" content="#10102b">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#10102b">
-    <!-- Custom Browser Color End -->
-  </head>
-
-  <body>
-
-    <!-- Loader Start -->
-    <div class="loader">
-      <div class="loader__container">
-        <div class="loader__circle">
-          <img src="img/loader.svg" alt="Ackley Template Loader Logo">
-        </div>
-      </div>
-    </div>
-    <!-- Loader End -->
-
-    <!-- Header Start -->
-    <header id="header" class="header header-transparent d-flex align-items-center justify-content-between">
-
-      <!-- Logo Start -->
-      <div class="header__logo">
-        <!-- Your Logo Here -->
-        <img src="img/logo.png" alt="KERAWA SPACE" style="width: 50%; height: auto;">
-      </div>
-
-      <!-- Logo End -->
-
-      <!-- Header Controls Start -->
-      <div class="header__controls d-flex justify-content-start">
-
-        <!-- Say Hello Button Start -->
-        <div class="controls__block d-flex align-items-center">
-          <a href="/login" class="btn sayhello-trigger link-l">
-            <i class="fa-solid fa-pencil"></i>
-            <span>JOIN US</span>
-          </a>
-        </div>
-        <!-- Say Hello Button End -->
-
-        <!-- Socials Start -->
-        <div class="controls__block d-flex align-items-center">
-          <!-- socials trigger -->
-          <a href="#" id="socials-trigger" class="socials-trigger link-l">
-            <i class="fa-solid fa-share-nodes"></i>
-          </a>
-          <!-- socials -->
-          <div id="header-socials" class="header__socials">
-            <!-- socials close -->
-            <a href="#" id="socials-close" class="socials__close link-l">
-              <span></span>
-            </a>
-            <!-- socials links -->
-            <ul class="socials__links">
-              <li>
-                <a class="link-s" href="https://discord.com/" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                  <span>Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a class="link-s" href="https://twitter.com/" target="_blank">
-                  <i class="fa-brands fa-twitter"></i>
-                  <span>Twitter</span>
-                </a>
-              </li>
-              
-              <li>
-                <a class="link-s" href="https://www.tiktok.com/" target="_blank">
-                  <i class="fa-brands fa-tiktok"></i>
-                  <span>Tik-Tok</span>
-                </a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-        <!-- Socials End -->
-
-        <!-- Menu Trigger Start -->
-        <div class="controls__block">
-          <a href="#0" id="menu-trigger" class="menu-trigger link-l">
-            <span class="menu-objects"></span>
-            <span class="menu-close"></span>
-          </a>
-        </div>
-        <!-- Menu Trigger End -->
-
-      </div>
-      <!-- Header Controls End -->
-
-    </header>
-    <!-- Header End -->
-
-    <!-- Menu Start -->
-    <nav id="menu" class="menu">
-      <div class="menu__content">
-        <!-- SVG gradient background -->
-        <div class="svg-layer svg-layer-menu"></div>
-        <div class="container-fluid p-0 fullheight-mobile">
-          <div class="row g-0 fullheight-mobile">
-
-            <!--Menu Data Block Start -->
-            <div class="col-12 menu__data">
-
-              <!-- Menu Links Start -->
-              <div class="menudata__links">
-                <div class="container-fluid p-0">
-                  <div class="row g-0">
-                    <div class="col-12">
-
-                      <!-- Navigation Start -->
-                      <ul class="navigation">
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="home-trigger">Home</a>
-                          <div id="home-trigger-marquee" class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                              <span>Home</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="#0" id="about-trigger">Our History</a>
-                          <div class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Our History</span>
-                              <span>Our History</span>
-                              <span>Our History</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Our History</span>
-                              <span>Our History</span>
-                              <span>Our History</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Our History</span>
-                              <span>Our History</span>
-                              <span>Our History</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="/posts" id="works-trigger">Artworks</a>
-                          <div class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Artworks</span>
-                              <span>Artworks</span>
-                              <span>Artworks</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Artworks</span>
-                              <span>Artworks</span>
-                              <span>Artworks</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Artworks</span>
-                              <span>Artworks</span>
-                              <span>Artworks</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <a class="navigation__link link-l-arrow" href="/contact">Contact</a>
-                          <div class="marquee-link">
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Contact</span>
-                              <span>Contact</span>
-                              <span>Contact</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Contact</span>
-                              <span>Contact</span>
-                              <span>Contact</span>
-                            </div>
-                            <div class="marquee-link-content scroll-x2">
-                              <span>Contact</span>
-                              <span>Contact</span>
-                              <span>Contact</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <!-- Navigation End -->
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Menu Links End -->
-
-              <!-- Menu Footer Start -->
-              <div class="menudata__footer d-md-flex align-items-md-center justify-content-md-between">
-                <div class="container-fluid p-0">
-                  <div class="row g-0 d-flex flex-column flex-md-row">
-                    <div class="col-12 col-md-6 text-start">
-                      <div class="content-block">
-                        <p class="additional-text"><a class="link-s" href="mailto:example@example.com?subject=Message%20from%20your%20site">contact@kerawaspace.com</a></p>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6 text-start text-md-end">
-                      <div class="content-block">
-                        <p class="copyright additional-text"><a class="link-s" href="https://1.envato.market/EKA9WD" target="_blank">Kerawa Space</a>. 2024</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Menu Footer End -->
-
-            </div>
-            <!--Menu Data Block End -->
-
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Menu End -->
-
-    <!-- Main Section Start -->
-    @yield('content')
-    <!-- Main Section End -->
-
-    @extends('layouts.portalfeatures')
-
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-      <!-- Background of PhotoSwipe.
-      It's a separate element, as animating opacity is faster than rgba(). -->
-      <div class="pswp__bg"></div>
-
-      <!-- Slides wrapper with overflow:hidden. -->
-      <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-          <div class="pswp__top-bar">
-
-            <!--  Controls are self-explanatory. Order can be changed. -->
-
-            <div class="pswp__counter"></div>
-
-            <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
-
-            <button class="pswp__button pswp__button--share link-s" title="Share"></button>
-
-            <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
-
-            <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
-
-            <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-            <!-- element will get class pswp__preloader-active when preloader is running -->
-            <div class="pswp__preloader">
-              <div class="pswp__preloader__icn">
-                <div class="pswp__preloader__cut">
-                  <div class="pswp__preloader__donut"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-              <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
-
-            <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
-
-            <div class="pswp__caption">
-              <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
+<!-- CSS FILES -->
+<link rel="stylesheet" href="css/fontawesome.min.css">
+<link rel="stylesheet" href="css/bundle.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="cursor js-cursor"></div>
+<!-- end cursor -->
+<div class="preloader" id="preloader"> <span></span> <span></span> <span></span> <span></span>
+  <div class="inner">
+    <canvas class="progress-bar" id="progress-bar" width="400" height="400"></canvas>
+    <img src="img/logo.svg" alt="Image"> </div>
+  <!-- end inner --> 
+</div>
+<!-- end preloder -->
+<div class="page-transition"> <span></span> <span></span> <span></span> <span></span> </div>
+<!-- end page-transition -->
+<div class="site-navigation">
+  <ul>
     
-
-    <!-- Load Scripts Start -->
-    <script src="js/libs.min.js"></script>
-    <script src="js/gallery-init.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- Load Scripts End -->
+    <li><b><a href="/" data-text="Home">Home</a></b></li>
+    <li><b><a href="/posts" data-text="Projects">Projects</a></b></li>
+    <li><b><a href="/team" data-text="Team">Team</a></b></li>
+    <li><b><a href="/contact" data-text="Contact">Contact</a></b></li>
+  </ul>
+</div>
+<!-- edn site-navigation -->
+<nav class="navbar">
+  <div class="logo"> <a href="/"><img src="img/logo.svg" alt="Image"> </a> </div>
+  <!-- end logo -->
+  
+  <!-- end languages --> 
+  <span class="menu-text">MENU</span>
+  <div class="sandwich-menu">
+    <div class="sandwich">
+      <div class="sand"> <span></span> <span></span> </div>
+      <!-- end sand -->
+      <div class="closed"> <span></span> <span></span> </div>
+      <!-- end closed --> 
+    </div>
+    <!-- end sandwich --> 
     
-  </body>
+  </div>
+  <!-- end sandwich-menu --> 
+</nav>
+<!-- end navbar -->
+<header class="slider">
+  <div class="video-bg">
+		<video src="video/hero.mp4" autoplay muted playsinline loop></video>
+    
+	  <div class="container">
+	  
+            <div class="link-holder"> <a href="{{ route('posts.index') }}">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="2 2 100 100" xml:space="preserve">
+                <circle fill="none" stroke="#fff" stroke-width="2" cx="52" cy="52" r="50"></circle>
+              </svg>
+              <span>DISCOVER</span> </a>
+		  </div>
+		  <!-- end link-holder -->
+	  </div>
+	  <!-- end container -->
+	</div>
+	<!-- end video-bg -->
+  
+  <!-- end bottom-bar -->
+  <aside class="left-side">
+    <div class="social-links">
+      <ul>
+        <li><a href="#" data-text="github">github</a></li>
+        <li><a href="#" data-text="behance">behance</a></li>
+        <li><a href="#" data-text="behance">behance</a></li>
+      </ul>
+    </div>
+    <!-- end social-links --> 
+  </aside>
+  <!-- end left-side -->
+  <aside class="right-side"> <a href="#" data-text="info@kerawaspace.com">info@kerawaspace.com</a> </aside>
+  <!-- end right-side --> 
+</header>
+<!-- end slider -->
 
+<!-- end content-section -->
 
-<!-- Mirrored from mixdesign.club/themeforest/ackley/index-demo-fullscreen-video.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jun 2024 19:48:23 GMT -->
-</html> 
+<!-- end content-section -->
+
+<!-- end content-section -->
+
+<!-- end footer --> 
+
+<!-- JS FILES --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/bundle.js"></script> 
+<script src="js/scripts.js"></script>
+</body>
+
+<!-- Mirrored from themezinho.net/annusa/index-video-bg.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jun 2024 16:11:12 GMT -->
+</html>
