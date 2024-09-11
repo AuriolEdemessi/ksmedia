@@ -2,93 +2,56 @@
 
 @section('content')
 
-<div class="Content">
-                    
-<main class="SingleArtists">
+<br><br><br>
 
-<div class="SingleArtists-main">
-    <h2 class="SingleArtists-title">OUR TEAM</h2>
-    <div class="SingleArtists-description">
-    
-    <div class="RichText">
-            <h3> {{ $founder->name }}</h3>
-            <h4> {{ $founder->role }} of Kerawa Space</h4>
-                <div class="Share">
-                  <a href="{{ route('team.show', $founder->id) }}" class="Share-button">Discover {{ $founder->name }}</a>
-                
-                </div>
-            </div>
-            
-</div>
-<div class="SingleArtists-links">
-<div class="Links">
-
-
-</div>
-</div>
-
-
-</div>
-
-
-<!--<div class="SingleArtists-main">
-    <div class="gallery columns-1">
-
-        <div class="gallery-item">
-            <a href="">
-              <img src="{{ $founder->profile_picture_url }}" alt="{{ $founder->name }}" style="width: 80%;">
-              
-            </a>
-            <div class="RichText">
-            <h3> {{ $founder->name }}</h3>
-            <h4> {{ $founder->role }} of Kerawa Space</h4>
-                <div class="Share">
-                  <a href="{{ route('team.show', $founder->id) }}" class="Share-button">Discover {{ $founder->name }}</a>
-                
-                </div>
-            </div>
-             
-          </div>
-
-          
-
-
-    </div>
-</div>-->
-        
-<section class="PageModules"></section>
-</main>
-
-<main class="SingleArtists">
-
-
-<div class="gallery columns-4">
-
+<div class="container my-5">
+<h2 class="SingleArtists-title">OUR TEAM</h2>
+<hr>
 @foreach($teamMembers as $member)
-<div class="gallery-item">
-                            <a href="{{ route('team.show', $member->id) }}">
-                              <img src="{{ $member->profile_picture_url }}" alt="{{ $member->name }}">
-                              <div class="overlay">
-                                <div class="image-description">{{ $member->name }}</div>
-                              </div>
-                            </a>
-                </div>
-        <div class="RichText">
-           <h3>{{ $member->name }}</h3>
-           <h4>{{ $member->role }}</h4>
-           <a href="{{ route('team.show', $member->id) }}" class="Share-button">Discover {{ $member->name }}</a>
+<div class="list-group">
+        <!-- Boucle pour afficher chaque membre de l'équipe -->
+        
+        <div class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-1">{{ $founder->name }}</h5>
+                <!-- Bouton pour voir plus de détails -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#details-{{ $member->id }}" aria-expanded="false" aria-controls="details-{{ $member->id }}">
+                    Découvrir
+                </button>
+            </div>
+            <!-- Détails cachés (rôle et description) -->
+            <div class="collapse mt-3" id="details-{{ $member->id }}">
+                <p><strong></strong>  {{ $founder->role }} of Kerawa Space</p>
+                <p><strong></strong>  {{ $founder->description }} </p>
+            </div>
+        </div>
+        
     </div>
+    @endforeach
 
+    <br>
 
-@endforeach
-                        
+    <div class="list-group">
+        <!-- Boucle pour afficher chaque membre de l'équipe -->
+        @foreach($teamMembers as $member)
+        <div class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-1">{{ $member->name }}</h5>
+                <!-- Bouton pour voir plus de détails -->
+                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#details-{{ $member->id }}" aria-expanded="false" aria-controls="details-{{ $member->id }}">
+                    Découvrir
+                </button>
+            </div>
+            <!-- Détails cachés (rôle et description) -->
+            <div class="collapse mt-3" id="details-{{ $member->id }}">
+                <p><strong></strong> {{ $member->role }}</p>
+                <p><strong></strong> {{ $member->description }}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>
 </div>
-</main>
 
-
-
-    </div>
- </div>
         
 
 @endsection
