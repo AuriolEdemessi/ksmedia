@@ -117,7 +117,7 @@
                 <nav class="HeaderNav" id="mobileMenu"> <!-- Ajoutez l'ID "mobileMenu" -->
                   <a class="HeaderNav-item" href="/posts">Projects</a>
                   <a class="HeaderNav-item" href="/team">Team</a>
-                  <a class="HeaderNav-item" href="/exhibitions">Exhibitions</a>
+                  <!--<a class="HeaderNav-item" href="/exhibitions">Exhibitions</a>-->
                   <a class="HeaderNav-item" href="/contact">CONTACT</a>
                   @auth
                     @if (Auth::user()->isAdmin())
