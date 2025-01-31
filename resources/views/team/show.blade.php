@@ -5,43 +5,67 @@
 
 <div class="Content">
                     
-                    <main class="SingleArtists">
-
-                    <div class="SingleArtists-image">
-                            
-                            <figure class="SingleArtists-image-image has-thumbnail Image has-thumbnail" >
-                                <img class="SingleArtists-image-image-img" src="{{ $teamMember->profile_picture_url }}" alt="{{ $teamMember->name }}" style="max-width:100%; max-height:100%;">
-                                </figure>
-                    </div>
-
-                    <div class="SingleArtists-main">
-                        <h2 class="SingleArtists-title">{{ $teamMember->name }}</h2>
-                            <div class="SingleArtists-description">
-                                    <div class="RichText">
-                                         <h3>{{ $teamMember->role }}</h3>
-                                        <p>{{ $teamMember->description }}</p>
-                                    </div>
-
-                                    
-
+<main class="SingleArtists">
+        
+        <div class="gallery columns-3">
+            
+                    <div class="gallery-item">
+                            <div class="SingleArtists-main">
+                                <h2 class="SingleArtists-title">{{ $teamMember->name }}</h2>
+                                <div class="SingleArtists-description">
+                                <div class="RichText">
+                                @foreach($teamMember->roles as $role)
+                                    <p>{{ $role->name }}</p>
+                                    @endforeach
+                                    <p>{{ $teamMember->description }}
+                                        
+                                    </p>
+                                </div>
                             </div>
-
-                    <div class="SingleArtists-links">
-                        <div class="Links">
-                               
-                                
-                        </div>
+                            </div>
                     </div>
-                    
 
-                </div>
 
+                   
+                    <!--<div class="gallery-item">
+                        <a href="" data-toggle="modal" data-target="#modal-cover">
+                        <img src="" alt="Artwork Cover">
+                        <div class="overlay">
+                            <div class="image-description"></div>
+                        </div>
+                        </a>
+                    </div>-->
+
+                    @foreach($teamMember->posts as $post)
+                            <div class="gallery-item">
+                                <a href="" data-toggle="modal" data-target="#modal-photo-{{ $key }}">
+                                <img src="{{ $photo }}" alt="{{ $post->title }} Artwork Photo">
+                                <div class="overlay">
+                                    <div class="image-description"></div>
+                                </div>
+                                </a>
+                            </div>
+                    @endforeach
+    
+    <!-- Modal for cover -->
+    
+
+            <!-- Modals for additional photos -->
+            
+
+              
+
+            
+            <!-- Ajoutez plus d'images ici -->
+        </div>
                 
+                
+    
 
 
-                <section class="PageModules"></section>
+</main>
 
-                </main>
+                    
 
 </div>
 

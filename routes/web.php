@@ -5,6 +5,9 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TeamMemberController;
+use App\Http\Controllers\RoleController;
+
+
 
 
 
@@ -53,6 +56,9 @@ Route::get('/manageteam', [TeamMemberController::class, 'manageteam'])->name('ad
     Route::delete('/team/{teamMember}', [TeamMemberController::class, 'destroy'])->name('team.destroy');
     Route::delete('/team/{id}', [TeamMemberController::class, 'destroy'])->name('team.destroy');
 
+    
+
+
 // Routes for Categories
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
@@ -72,6 +78,8 @@ Route::put('/posts/{post}', [PostController::class, 'update'])->name('posts.upda
 Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
 
 Route::get('/exhibitions', [PostController::class, 'exhibitions'])->name('exhibitions.index');
+
+Route::resource('roles', RoleController::class);
 
 Route::get('/admin', function () {
     return view('admin.index');

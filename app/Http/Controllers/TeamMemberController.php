@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TeamMember;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -15,9 +16,9 @@ class TeamMemberController extends Controller
      */
     public function index()
     {
-        $founder = TeamMember::where('role', 'founder')->first();
-        $teamMembers = TeamMember::where('role', '!=', 'founder')->get();
-        return view('team.index', compact('founder', 'teamMembers'));
+        $roles = Role::with('teamMembers')->get(); // Récupère chaque rôle avec les membres associés
+        $teamMembers = TeamMember::with('roles')->get(); // Récupère tous les membres avec leurs rôles
+    return view('team.index', compact('roles', 'teamMembers'));
     }
 
     public function manageteam()
@@ -71,8 +72,9 @@ class TeamMemberController extends Controller
      * @param  \App\Models\TeamMember  $teamMember
      * @return \Illuminate\Http\Response
      */
-    public function show(TeamMember $teamMember)
+    public function show($id)
     {
+        $teamMember = TeamMember::with('roles', 'posts')->findOrFail($id);
         return view('team.show', compact('teamMember'));
     }
 

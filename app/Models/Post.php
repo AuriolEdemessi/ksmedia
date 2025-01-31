@@ -48,6 +48,12 @@ class Post extends Model implements HasMedia
         return $this->belongsToMany(Author::class);
     }
 
+    // Relation avec les membres de l'équipe
+    public function teamMembers()
+    {
+        return $this->belongsToMany(TeamMember::class, 'post_team_member');
+    }
+    
     public function registerMediaConversions(Media $media = null): void
     {
         $this->addMediaConversion('thumb')

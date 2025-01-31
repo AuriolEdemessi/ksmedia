@@ -2,54 +2,77 @@
 
 @section('content')
 
+<div class="Content">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .credits-container {
+            width: 100%;
+            margin: 50px 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .credits-item {
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        .credits-item h2 {
+            font-size: 38px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin: 0;
+        }
+        .credits-item p {
+            margin: 5px 0 0;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+        
+        
+
+       <div class="credits-container">
+
+       @foreach ($roles as $role)
+            @if ($role->teamMembers->isNotEmpty())
+                <div class="credits-item">
+                    <h2>{{ $role->name }}</h2>
+                    @foreach ($role->teamMembers as $member)
+                        <p>
+                            <a href="{{ route('team.show', $member->id) }}" style="text-decoration: none; color: inherit;">
+                                {{ $member->name }}
+                            </a>
+                        </p>
+                    @endforeach
+                </div>
+            @endif
+        @endforeach
+
+           
+         
+
+             
+                 
+
+
+
+                    
+        </div>
+
 <br><br><br>
 
-<div class="container my-5">
-<h2 class="SingleArtists-title">OUR TEAM</h2>
-<hr>
-@foreach($teamMembers as $member)
-<div class="list-group">
-        <!-- Boucle pour afficher chaque membre de l'équipe -->
-        
-        <div class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-1">{{ $founder->name }}</h5>
-                <!-- Bouton pour voir plus de détails -->
-                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#details-{{ $member->id }}" aria-expanded="false" aria-controls="details-{{ $member->id }}">
-                    Découvrir
-                </button>
-            </div>
-            <!-- Détails cachés (rôle et description) -->
-            <div class="collapse mt-3" id="details-{{ $member->id }}">
-                <p><strong></strong>  {{ $founder->role }} of Kerawa Space</p>
-                <p><strong></strong>  {{ $founder->description }} </p>
-            </div>
-        </div>
-        
-    </div>
-    @endforeach
 
-    <br>
 
-    <div class="list-group">
-        <!-- Boucle pour afficher chaque membre de l'équipe -->
-        @foreach($teamMembers as $member)
-        <div class="list-group-item">
-            <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-1">{{ $member->name }}</h5>
-                <!-- Bouton pour voir plus de détails -->
-                <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#details-{{ $member->id }}" aria-expanded="false" aria-controls="details-{{ $member->id }}">
-                    Découvrir
-                </button>
-            </div>
-            <!-- Détails cachés (rôle et description) -->
-            <div class="collapse mt-3" id="details-{{ $member->id }}">
-                <p><strong></strong> {{ $member->role }}</p>
-                <p><strong></strong> {{ $member->description }}</p>
-            </div>
-        </div>
-        @endforeach
-    </div>
+    
 </div>
 
         
